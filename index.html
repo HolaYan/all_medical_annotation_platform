@@ -1,60 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>大模型医疗问答能力评测</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="top-nav">
-      <h2>选择评测对象</h2>
-      <ul id="dataset-list">
-      </ul>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学问题评测系统</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+</head>
+<body>
     <div class="container">
-      <main class="content">
-        <h1 id="main-title">请从顶部选择一个评测对象开始评测</h1>
-        <div id="pagination-nav"></div>
-        <div id="evaluation-area">
+        <!-- 顶部导航 -->
+        <div class="top-nav">
+            <h2>医学问题评测系统</h2>
+            <ul id="dataset-list"></ul>
         </div>
-        <div id="export-container"></div>
-        <div id="loading-spinner" class="spinner" style="display: none"></div>
-      </main>
+
+        <!-- 主内容区域 -->
+        <div class="content">
+            <h1 id="main-title">请选择评测对象</h1>
+            
+            <!-- 导出容器 - 在这里显示导出按钮 -->
+            <div id="export-container"></div>
+            
+            <!-- 分页导航 -->
+            <div id="pagination-nav"></div>
+            
+            <!-- 评测区域 -->
+            <div id="evaluation-area"></div>
+            
+            <!-- 加载指示器 -->
+            <div id="loading-spinner" class="spinner" style="display: none;"></div>
+        </div>
     </div>
 
     <!-- 图片模态框 -->
     <div id="image-modal" class="image-modal" onclick="closeImageModal()">
-      <span class="close-modal" onclick="closeImageModal()">&times;</span>
-      <div class="modal-content">
-        <img class="modal-image" id="modal-image" />
-      </div>
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modal-image" class="modal-image" />
+        </div>
     </div>
 
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"],
-          ],
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-        },
-        svg: {
-          fontCache: "global",
-        },
-      };
-    </script>
-    <script
-      type="text/javascript"
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

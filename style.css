@@ -64,6 +64,44 @@ body {
   font-size: 1.8em;
 }
 
+/* 导出按钮样式 */
+#export-container {
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.export-button {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  min-width: 250px;
+}
+
+.export-button:hover {
+  background: linear-gradient(135deg, #218838, #1ea37e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+.export-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.export-stats {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
 #pagination-nav {
   display: flex;
   flex-wrap: wrap;
@@ -347,27 +385,6 @@ body {
   color: #28a745;
   font-weight: bold;
   font-size: 1em;
-}
-
-#export-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.export-button {
-  background-color: #dc3545;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.export-button:hover {
-  background-color: #c82333;
 }
 
 .spinner {

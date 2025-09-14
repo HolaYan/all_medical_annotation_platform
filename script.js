@@ -165,13 +165,25 @@ function setupEventListeners() {
 async function loadAndDisplayDataset(datasetName) {
   mainTitle.textContent = `评测对象: ${datasetName}`;
   evaluationArea.innerHTML = "";
-  exportContainer.innerHTML = "";
+  exportContainer.innerHTML = ""; // 清空导出容器
   paginationNav.innerHTML = "";
   loadingSpinner.style.display = "block";
 
   currentDatasetName = datasetName;
   allData = {};
   questionIds = [];
+
+  // 加载保存的标注（针对当前数据集）
+  const saved = localStorage.getItem('medical_annotations');
+  if (saved) {
+    const allSavedAnnotations = JSON.parse(saved);
+    // 过滤出当前数据集的标注
+    userAnnotations = {};
+    Object.keys(allSavedAnnotations).forEach(questionId => {
+      // 这里可以根据需要添加数据集过滤逻辑
+      userAnnotations[questionId] = allSavedAnnotations[questionId];
+    });
+  }
 
   try {
     // 加载模型数据 - 使用您指定的文件名格式
@@ -228,6 +240,11 @@ function finishLoading() {
   createQuestionCards();
   createPaginationNav();
   showQuestion(1);
+  
+  // 如果有已保存的标注，显示导出按钮
+  if (Object.keys(userAnnotations).length > 0) {
+    showExportButton();
+  }
 }
 
 async function createQuestionCards() {
@@ -519,27 +536,8 @@ function handleSubmitAnnotation(button) {
     navLink.classList.add('completed');
   }
   
-  // 检查是否所有问题都已完成
-  if (Object.keys(userAnnotations).length === questionIds.length) {
-    let allQuestionsCompleted = true;
-    for (const qId of questionIds) {
-      const qData = allData[qId];
-      const qModels = Object.keys(qData.models);
-      for (const model of qModels) {
-        if (!userAnnotations[qId] || !userAnnotations[qId][model] ||
-            !userAnnotations[qId][model].truthfulness ||
-            !userAnnotations[qId][model].informativeness) {
-          allQuestionsCompleted = false;
-          break;
-        }
-      }
-      if (!allQuestionsCompleted) break;
-    }
-    
-    if (allQuestionsCompleted) {
-      showExportButton();
-    }
-  }
+  // 显示导出按钮（不管是否全部完成）
+  showExportButton();
   
   // 跳转到下一题
   const nextQuestionNumber = questionNumber + 1;
@@ -549,6 +547,7 @@ function handleSubmitAnnotation(button) {
     }, 300);
   }
 }
+
 
 function handleSkipCase(button) {
   const questionNumber = parseInt(button.dataset.questionNumber);
@@ -666,13 +665,22 @@ function loadExistingAnnotations(questionNumber) {
 }
 
 function showExportButton() {
+  // 如果导出按钮已存在，不重复创建
+  if (document.querySelector('.export-button')) {
+    return;
+  }
+  
   exportContainer.innerHTML = "";
   const exportButton = document.createElement("button");
   exportButton.className = "export-button";
-  exportButton.textContent = `所有问题已评测！导出 "${currentDatasetName}" 的结果`;
+  
+  // 计算已完成的标注数量
+  const completedCount = Object.keys(userAnnotations).length;
+  const totalQuestions = questionIds.length;
+  
+  exportButton.textContent = `导出 "${currentDatasetName}" 的标注结果 (${completedCount}/${totalQuestions})`;
   exportButton.onclick = exportAnnotationsToJson;
   exportContainer.appendChild(exportButton);
-  exportButton.scrollIntoView({ behavior: "smooth" });
 }
 
 function exportAnnotationsToJson() {
@@ -681,11 +689,58 @@ function exportAnnotationsToJson() {
     return;
   }
 
+  // 计算统计信息
+  const completedQuestions = Object.keys(userAnnotations).length;
+  const totalQuestions = questionIds.length;
+  const completionRate = ((completedQuestions / totalQuestions) * 100).toFixed(1);
+  
+  // 计算每个模型的评分统计
+  const modelStats = {};
+  Object.values(userAnnotations).forEach(questionAnnotations => {
+    Object.entries(questionAnnotations).forEach(([model, scores]) => {
+      if (!modelStats[model]) {
+        modelStats[model] = {
+          truthfulness: [],
+          informativeness: [],
+          count: 0
+        };
+      }
+      if (scores.truthfulness) {
+        modelStats[model].truthfulness.push(scores.truthfulness);
+      }
+      if (scores.informativeness) {
+        modelStats[model].informativeness.push(scores.informativeness);
+      }
+      if (scores.truthfulness && scores.informativeness) {
+        modelStats[model].count++;
+      }
+    });
+  });
+
+  // 计算平均分
+  Object.keys(modelStats).forEach(model => {
+    const stats = modelStats[model];
+    stats.avgTruthfulness = stats.truthfulness.length > 0 ? 
+      (stats.truthfulness.reduce((a, b) => a + b, 0) / stats.truthfulness.length).toFixed(2) : 0;
+    stats.avgInformativeness = stats.informativeness.length > 0 ? 
+      (stats.informativeness.reduce((a, b) => a + b, 0) / stats.informativeness.length).toFixed(2) : 0;
+  });
+
   const dataToExport = {
     dataset: currentDatasetName,
     exportDate: new Date().toISOString(),
-    totalAnnotations: Object.keys(userAnnotations).length,
-    annotations: userAnnotations
+    completionStats: {
+      completedQuestions: completedQuestions,
+      totalQuestions: totalQuestions,
+      completionRate: `${completionRate}%`
+    },
+    modelStatistics: modelStats,
+    annotations: userAnnotations,
+    metadata: {
+      version: "1.0",
+      evaluator: "医学评测系统",
+      models: MODELS[currentDatasetName] || []
+    }
   };
 
   const jsonString = JSON.stringify(dataToExport, null, 2);
@@ -693,11 +748,17 @@ function exportAnnotationsToJson() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `medical_annotations_${currentDatasetName}_${new Date().toISOString().slice(0, 10)}.json`;
+  
+  const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
+  a.download = `medical_annotations_${currentDatasetName}_${timestamp}.json`;
+  
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+  
+  // 显示导出成功提示
+  alert(`导出成功！\n数据集: ${currentDatasetName}\n已完成: ${completedQuestions}/${totalQuestions} (${completionRate}%)`);
 }
 
 async function renderCsvToTable(csvPath) {
