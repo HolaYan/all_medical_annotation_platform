@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大模型医疗问答能力评测</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <h2>选择评测对象</h2>
+      <ul id="dataset-list">
+      </ul>
+    </header>
+    <div class="container">
+      <main class="content">
+        <h1 id="main-title">请从顶部选择一个评测对象开始评测</h1>
+        <div id="pagination-nav"></div>
+        <div id="evaluation-area">
+        </div>
+        <div id="export-container"></div>
+        <div id="loading-spinner" class="spinner" style="display: none"></div>
+      </main>
+    </div>
+
+    <!-- 图片模态框 -->
+    <div id="image-modal" class="image-modal" onclick="closeImageModal()">
+      <span class="close-modal" onclick="closeImageModal()">&times;</span>
+      <div class="modal-content">
+        <img class="modal-image" id="modal-image" />
+      </div>
+    </div>
+
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

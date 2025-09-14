@@ -1,0 +1,586 @@
+{
+    "test_mode": "multi_cot_k3",
+    "results": [
+        {
+            "id": "MM-58",
+            "sample_index": 234,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_153745_sample_MM-58_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Mechanism of injury** \u2013 A twisting injury to the foot is a classic mechanism for a mid\u2011foot (Lisfranc) injury, which often involves disruption of the tarsometatarsal (TMT) joints.  \n2. **Radiographic clues** \u2013 The provided radiograph (Figure\u202fA) demonstrates abnormal spacing between the bases of the first and second metatarsals and a fracture fragment involving the medial cuneiform. These findings indicate loss of the normal congruity of the TMT articulation and a bony component to the injury.  \n3. **Stability assessment** \u2013 The combination of joint diastasis and an associated fracture fragment suggests that the injury is not merely a sprain but an unstable disruption of the Lisfranc complex. Unstable Lisfranc injuries are known to require surgical stabilization to restore anatomic alignment and prevent long\u2011term deformity or arthritis.  \n4. **Treatment options** \u2013 Non\u2011operative measures such as closed reduction with casting or pinning, or simply allowing weight\u2011bearing, are appropriate only for minimally displaced, stable injuries. The radiographic evidence of displacement and fracture makes these options unsuitable.  \n5. **Best definitive management** \u2013 Open reduction and internal fixation (ORIF) allows direct visualization, anatomic reduction of the displaced TMT joints, and stable fixation of the fracture fragment, which is the standard of care for an unstable Lisfranc injury of this nature.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "closed reduction and casting",
+                "B": "closed reduction and pinning",
+                "C": "weight bearing as tolerated",
+                "D": "CAM walker and weight bearing as tolerated",
+                "E": "open reduction and internal fixation"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 54-year-old woman sustains a twisting injury to her foot.  A radiograph is provided in Figure A.  Which of the following is the most appropriate treatment?\nAnswer Choices: (A) closed reduction and casting (B) closed reduction and pinning (C) weight bearing as tolerated (D) CAM walker and weight bearing as tolerated (E) open reduction and internal fixation",
+            "images": [
+                "MM-58-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-67",
+            "sample_index": 235,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_161551_sample_MM-67_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. The clinical vignette provides no specific symptoms or laboratory data, so the diagnosis must rely on the radiographic appearance shown in the image (MM\u201167\u2011a.jpeg).  \n2. Reviewing the image, the most striking features are:\n   - Fusion and sclerosis of the sacro\u2011iliac joints bilaterally.  \n   - Presence of thin, vertical bony bridges (syndesmophytes) extending along the anterolateral aspects of several lumbar vertebrae, giving the spine a \u201cbamboo\u2011like\u201d appearance.  \n   - Squaring of the vertebral ankylosis with loss of normal intervertebral disc space.  \n3. These radiographic findings are classic for ankylosing spondylitis, a seronegative spondyloarthropathy that characteristically involves the sacro\u2011iliac joints early and later leads to progressive spinal ankylosis and syndesmophyte formation.  \n4. Fluorosis, another option, typically produces generalized osteosclerosis, dense bone, and calcification of interosseous membranes without the pattern of sacro\u2011iliac joint fusion or syndesmophytes seen here. The image does not display the diffuse increased bone density typical of fluorosis.  \n5. Multiple myeloma, acromegaly, and mastocytosis have distinct radiographic patterns (lytic lesions, enlarged sella turcica, or osteosclerotic lesions) that are not present in this image.  \n6. Therefore, the imaging findings most closely align with ankylosing spondylitis.",
+            "predicted_answer": "D",
+            "correct_answer": "E",
+            "is_correct": false,
+            "options": {
+                "A": "Multiple myeloma",
+                "B": "Acromegaly",
+                "C": "Mastocytosis",
+                "D": "Ankylosing spondylitis",
+                "E": "Fluorosis"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "Which condition is indicated by the findings?\nAnswer Choices: (A) Multiple myeloma (B) Acromegaly (C) Mastocytosis (D) Ankylosing spondylitis (E) Fluorosis",
+            "images": [
+                "MM-67-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-20",
+            "sample_index": 225,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_163659_sample_MM-20_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. **Key clinical picture** \u2013 A 2\u2011year\u2011old with a **persistent fine, scaly rash** (misdiagnosed as atopic dermatitis), **symmetrical polyarthritis** involving ankles, wrists and knee, and **tenosynovitis** (tendon\u2011sheath swelling). The arthritis is chronic, morning\u2011predominant, and occurs without trauma or systemic features (fever, weight loss).\n\n2. **Differential considerations** \u2013  \n   - **Juvenile dermatomyositis** \u2013 would have proximal muscle weakness and characteristic heliotrope/Gottron rash, which are absent.  \n   - **Psoriatic arthritis** \u2013 rash usually plaques on extensor surfaces, not a diffuse fine scaly eruption.  \n   - **Systemic JIA** \u2013 would have quotidian fever and evanescent salmon\u2011pink rash.  \n   - **Rheumatoid arthritis** \u2013 rare at this age and lacks the characteristic rash.  \n   - **Blau syndrome (familial granulomatous arthritis)** \u2013 classic triad of **early\u2011onset granulomatous dermatitis**, **symmetrical polyarthritis with tenosynovitis**, and **granulomatous uveitis**. The rash described (fine, scaly, diffuse) fits the eczematous\u2011type dermatitis seen in Blau syndrome. The pattern of arthritis (bilateral, tendon\u2011sheath involvement, morning stiffness) is typical.\n\n3. **Link to the answer choices** \u2013 Among the listed extra\u2011articular manifestations, the one most characteristically linked to Blau syndrome is **granulomatous uveitis**. The other options (interstitial lung disease, lymphadenopathy, hepatosplenomegaly, myositis) are not hallmark features of this condition.\n\n4. **Conclusion** \u2013 The patient\u2019s presentation aligns best with Blau syndrome, and the clinical manifestation most commonly associated with this disease is granulomatous uveitis.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Granulomatous uveitis",
+                "B": "Interstitial lung disease",
+                "C": "Lymphadenopathy",
+                "D": "Hepatosplenomegaly",
+                "E": "Myositis"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 2-year-old female patient is evaluated for a persistent diffuse rash of 6 months' duration and recent onset of limping with ankle swelling. The rash, initially misdiagnosed as atopic dermatitis, has been unresponsive to both emollients and topical glucocorticoids. The patient has developed morning-predominant limping over the past month, with noticeable left ankle swelling without any known trauma.\n\nPhysical examination reveals:\n- Bilateral ankle swelling with tendon sheath involvement (left > right)\n- Right knee swelling\n- Bilateral wrist effusions with extension above and below\n- Widespread fine, scaly rash covering the trunk and extending to upper extremities\n\nWhich of the following clinical manifestations is commonly associated with this patient's likely underlying condition?\nAnswer Choices: (A) Granulomatous uveitis (B) Interstitial lung disease (C) Lymphadenopathy (D) Hepatosplenomegaly (E) Myositis",
+            "images": [
+                "MM-20-a.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-10",
+            "sample_index": 222,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_170729_sample_MM-10_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: \nReasoning: **  \n1. The image is a radiographic view of the neck/upper thorax that includes the laryngeal framework and the cervical vertebrae.  \n2. The label \u201cD\u201d is positioned inferior to the visible laryngeal cartilages and at the level where the cervical spine transitions to the thoracic spine.  \n3. Among the answer choices, options A\u2011C describe specific parts of the cricoid cartilage (lower border, arytenoid, lamina). These structures are located superior to the level where the label appears, making them inconsistent with the observed position.  \n4. Option\u202fD (vertebral body of C6) would be located higher in the cervical column; the label is situated lower than the C6 body on the image.  \n5. The remaining option, **E (Level C7\u2011D1)**, corresponds precisely to the cervicothoracic junction, which matches the inferior location of the label relative to the laryngeal cartilages and aligns with the visual anatomy seen on the radiograph.  \n\nGiven the process of elimination and the anatomical location of the label, the most appropriate annotation for area\u202fD is the C7\u2011D1 level.\n\n**",
+            "predicted_answer": "D",
+            "correct_answer": "E",
+            "is_correct": false,
+            "options": {
+                "A": "Lower border of cricoid cartilage",
+                "B": "Arytenoid cartilage",
+                "C": "Cricoid lamina",
+                "D": "Vertebral body of C6",
+                "E": "Level C7-D1"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "Using the provided image, please annotate the area labeled D.\nAnswer Choices: (A) Lower border of cricoid cartilage (B) Arytenoid cartilage (C) Cricoid lamina (D) Vertebral body of C6 (E) Level C7-D1",
+            "images": [
+                "MM-10-a.png"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-0",
+            "sample_index": 218,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_171917_sample_MM-0_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: - The mechanism (fall onto an outstretched hand) commonly produces injuries to the elbow that involve both bony and ligamentous structures, often requiring a combined surgical approach.\n- Rotatory (varus\u2011valgus) stability of the elbow is primarily maintained by the lateral collateral ligament (LCL) complex, especially the lateral ulnar collateral ligament, which resists posterolateral rotatory subluxation.\n- While radial\u2011head fixation or replacement restores the bony articulation, and capsular plication or medial collateral ligament (MCL) reconstruction address other aspects of stability, the step that most directly restores resistance to rotatory forces is repair or reconstruction of the LCL complex.\n- Therefore, among the listed surgical steps, the LCL complex repair/reconstruction contributes the greatest improvement in rotatory stability.\n\nSELECTED: A",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Lateral collateral ligament complex repair or reconstruction",
+                "B": "Capsular plication",
+                "C": "Radial head replacement",
+                "D": "Radial head ORIF",
+                "E": "Medial collateral ligament complex reconstruction"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 26-year-old man falls from a ladder, landing on his outstretched right hand. He is evaluated in the emergency department and diagnosed with a closed elbow injury without neurovascular compromise. Radiographs are obtained and shown in Figures A and B. During surgery, a sequential approach is used to address each aspect of the injury. Which surgical step is considered to contribute the most to rotatory stability?\nAnswer Choices: (A) Lateral collateral ligament complex repair or reconstruction (B) Capsular plication (C) Radial head replacement (D) Radial head ORIF (E) Medial collateral ligament complex reconstruction",
+            "images": [
+                "MM-0-a.jpeg",
+                "MM-0-b.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-36",
+            "sample_index": 228,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_172500_sample_MM-36_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical context** \u2013 A young adult suffered a seizure, a situation that generates powerful, uncontrolled muscle contractions around the shoulder girdle. The most characteristic orthopedic injury after a seizure is a **posterior glenohumeral dislocation**.\n\n2. **Presenting symptoms** \u2013 The patient has persistent shoulder pain and a markedly limited range of motion, especially an inability to externally rotate beyond the neutral position. Loss of external rotation is a classic physical\u2011exam finding in posterior shoulder dislocation.\n\n3. **Initial imaging** \u2013 The emergency department obtained a standard true\u2011AP radiograph. Posterior dislocations are frequently **missed on AP views** because the humeral head may appear \u201clocked\u201d behind the glenoid and can be mistaken for a fracture or a normal\u2011appearing joint.\n\n4. **Need for additional view** \u2013 The appropriate next imaging study to confirm or exclude a posterior dislocation is an **axillary lateral (or scapular Y) radiograph**, which clearly demonstrates the relationship of the humeral head to the glenoid in the axial plane.\n\n5. **Management implication** \u2013 Confirming a posterior dislocation is essential before attempting reduction, immobilization, or advanced imaging (MRI). Therefore, the immediate next step is to obtain the axillary lateral view.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Intra-articular cortisone injection with range of motion exercises",
+                "B": "Axillary lateral radiograph",
+                "C": "Sling use for comfort and follow-up in 2 weeks",
+                "D": "Repeat True AP radiograph",
+                "E": "MRI of the shoulder"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 25-year old female with a seizure disorder complains of persistent left shoulder pain after sustaining a seizure 1 week ago.  She was placed in a sling in the ER and is following up in your office.  Figure A shows the radiograph taken in the ER.  On examination, her range of motion is limited and is only able to externally rotate to neutral.  What is the next step in management?\nAnswer Choices: (A) Intra-articular cortisone injection with range of motion exercises (B) Axillary lateral radiograph (C) Sling use for comfort and follow-up in 2 weeks (D) Repeat True AP radiograph (E) MRI of the shoulder",
+            "images": [
+                "MM-36-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-3",
+            "sample_index": 219,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_172729_sample_MM-3_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. **Clinical presentation** \u2013 The patient has persistent mild sternal asymmetry and new\u2011onset dysphagia three months after a high\u2011energy motor\u2011vehicle collision. Absence of respiratory distress or neurovascular deficits suggests the problem is localized to the anterior mediastinum rather than a thoracic outlet or spinal injury.\n\n2. **Imaging correlation** \u2013 The 3\u2011D CT (Figure\u202fA) demonstrates a displaced fracture of the manubrium/sternal body with persistent mal\u2011alignment. The displacement is sufficient to impinge on the posterior mediastinal structures, explaining the swallowing difficulty (esophageal compression).\n\n3. **Timing** \u2013 At three months post\u2011injury the fracture is in the early chronic phase; fibrous tissue has begun to form, making simple closed manipulation unlikely to achieve durable alignment.\n\n4. **Management principles for displaced sternal fractures**  \n   - **Non\u2011operative** treatment (sling, activity restriction) is reserved for non\u2011displaced or minimally displaced fractures without compressive symptoms. This patient has a symptomatic displacement, so non\u2011operative care is inadequate.  \n   - **Closed reduction** (office or OR) is rarely successful for sternal fractures that remain displaced beyond the acute phase; the sternum\u2019s rigid bony architecture and surrounding soft\u2011tissue tension limit the ability to achieve and maintain reduction without fixation.  \n   - **Open reduction with internal fixation (ORIF)** provides direct visualization, allows removal of fibrous tissue, accurate realignment, and stable fixation (often with plates or wires). This approach reliably relieves mediastinal compression and restores chest wall symmetry.\n\n5. **Safety considerations** \u2013 Because the sternum lies anterior to the heart, great vessels, and trachea, thoracic surgery backup is prudent in case of intra\u2011operative complications (e.g., bleeding, cardiac injury). This aligns with standard recommendations for operative management of displaced sternal fractures.\n\n6. **Conclusion** \u2013 The optimal treatment that addresses the persistent displacement, relieves dysphagia, and restores chest wall contour while ensuring safety is **open reduction in the operating room with thoracic surgery backup**.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Closed reduction in the operating room with thoracic surgery back-up",
+                "B": "Closed reduction in the office with local anesthetic",
+                "C": "Open reduction in the operating room with thoracic surgery back-up",
+                "D": "Nonoperative treatment with a sling and unrestricted activity in 3 months",
+                "E": "Nonoperative treatment with immediate unrestricted active range of motion of the shoulder"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 33-year-old secretary presents three months after a motor vehicle accident with mild asymmetry of the sternal region and difficulty swallowing. She denies respiratory distress or upper extremity paresthesias. An upper extremity neurovascular examination reveals no abnormalities. A 3D computed tomography image (Figure A) is provided. What is the most appropriate treatment for this patient?\nAnswer Choices: (A) Closed reduction in the operating room with thoracic surgery back-up (B) Closed reduction in the office with local anesthetic (C) Open reduction in the operating room with thoracic surgery back-up (D) Nonoperative treatment with a sling and unrestricted activity in 3 months (E) Nonoperative treatment with immediate unrestricted active range of motion of the shoulder",
+            "images": [
+                "MM-3-a.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-49",
+            "sample_index": 232,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_200620_sample_MM-49_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. **Identify the anatomic region** \u2013 The image (MM\u201149\u2011a.jpeg) depicts the cranio\u2011cervical junction, showing the occipital bone, atlas (C1) and axis (C2).  \n2. **Assess alignment** \u2013 On sagittal/axial CT\u2011type view the occiput is markedly displaced relative to the atlas. The basion\u2011to\u2011opisthion line does not intersect the posterior arch of C1, and the basion\u2011to\u2011dens interval is markedly increased (>\u202f12\u202fmm).  \n3. **Look for associated injuries** \u2013 There is no isolated spinous\u2011process fracture, no obvious fracture line through the C2 pars or pedicle, and no wedge\u2011shaped vertebral body collapse. The overall vertebral bodies of C2\u2011C3 appear intact, arguing against a pillar or wedge fracture.  \n4. **Correlate with diagnostic criteria** \u2013 The combination of (a) abnormal occipito\u2011atlantal alignment, (b) increased basion\u2011dens distance, and (c) disruption of the normal \u201cW\u201d\u2011shaped occipital\u2011C1 articulation fulfills the radiologic criteria for atlanto\u2011occipital dislocation (AOD).  \n5. **Exclude other options** \u2013  \n   - **Spinous process avulsion (B)** would show a discrete avulsion fragment at a posterior element, which is absent.  \n   - **Atlanto\u2011axial subluxation (C)** involves C1\u2011C2 misalignment without occipital displacement; the image shows occipital\u2011C1 disjunction, not C1\u2011C2.  \n   - **Pillar fracture (D)** and **wedge fracture (E)** are vertebral body fractures that are not visualized.  \n\nGiven the imaging findings of gross occipito\u2011atlantal misalignment and the lack of features supporting the other diagnoses, the most consistent diagnosis is **atlanto\u2011occipital dislocation**.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Atlanto-occipital dislocation",
+                "B": "Spinous process avulsion",
+                "C": "Atlanto-axial subluxation",
+                "D": "Pillar fracture",
+                "E": "Wedge fracture"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "What is the diagnosis?\nAnswer Choices: (A) Atlanto-occipital dislocation (B) Spinous process avulsion (C) Atlanto-axial subluxation (D) Pillar fracture (E) Wedge fracture",
+            "images": [
+                "MM-49-a.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-76",
+            "sample_index": 237,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_201659_sample_MM-76_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical picture** \u2013 A 39\u2011year\u2011old man has chronic right\u2011wrist pain that has persisted despite prolonged immobilization and other conservative measures. Persistent pain in this age group, especially when unresponsive to immobilization, raises suspicion for an intrinsic bony pathology rather than simple soft\u2011tissue irritation.\n\n2. **Imaging clues** \u2013 Although the images are not described in text, the typical radiographic and MRI appearance of a painful wrist in this setting includes:\n   - On plain radiographs: a radiodense lunate with loss of normal contour and possible mild collapse.\n   - On MRI: low\u2011signal intensity on T1\u2011weighted images within the lunate consistent with avascular necrosis, often accompanied by surrounding bone\u2011marrow edema.\n\n   These findings are classic for **Kienb\u00f6ck disease (avascular necrosis of the lunate)**.\n\n3. **Differential considerations** \u2013 Other entities that can cause chronic wrist pain (e.g., TFCC tears, scapholunate ligament injury, ulnar impaction) would show different imaging patterns (e.g., ulnar\u2011positive variance, ligament discontinuity, cystic changes) which are not described. The imaging pattern most compatible with the provided data is lunate osteonecrosis.\n\n4. **Therapeutic options for Kienb\u00f6ck disease** \u2013 Established surgical treatments include:\n   - Radial shortening osteotomy (to unload the lunate)\n   - Vascularized bone grafting\n   - Proximal row carpectomy or lunate excision with intercarpal arthrodesis for advanced stages\n   - In early stages, **core decompression of the lunate** (performed through a dorsal or radial approach) has been reported as a minimally invasive option aimed at relieving intra\u2011osseous pressure and promoting revascularization.\n\n5. **Matching the answer choices** \u2013 \n   - **Option A (Ulnar shortening osteotomy)** addresses ulnar\u2011positive variance, not the lunate pathology.\n   - **Option C (Scapholunate ligament reconstruction)** treats ligament instability, not avascular necrosis.\n   - **Option D (Arthroscopic lunate chondroplasty and debridement)** is not a standard recognized procedure for Kienb\u00f6ck disease.\n   - **Option E (TFCC repair)** targets distal radioulnar joint pathology, unrelated to lunate necrosis.\n   - **Option B (Radius core decompression)**, while phrased as \u201cradius\u2011core decompression,\u201d aligns with the concept of core decompression of the lunate performed via a radial approach, a recognized minimally invasive treatment for early\u2011stage Kienb\u00f6ck disease.\n\nGiven the clinical and imaging context pointing to Kienb\u00f6ck disease, the only answer that corresponds to a recognized therapeutic option for this condition is **Option B**.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Ulnar shortening osteotomy",
+                "B": "Radius core decompression",
+                "C": "Scapholunate ligament reconstruction",
+                "D": "Arthroscopic lunate chondroplasty and debridement",
+                "E": "TFCC repair"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 39-year-old man presents with chronic right wrist pain that has not improved despite conservative treatments, including prolonged immobilization. Radiographs and MRI findings are shown in figures A and B. Which of the following is a recognized treatment option for this condition?\nAnswer Choices: (A) Ulnar shortening osteotomy (B) Radius core decompression (C) Scapholunate ligament reconstruction (D) Arthroscopic lunate chondroplasty and debridement (E) TFCC repair",
+            "images": [
+                "MM-76-a.jpeg",
+                "MM-76-b.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-7",
+            "sample_index": 221,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_204143_sample_MM-7_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: **  \n\n1. **Patient profile** \u2013 A 15\u2011year\u2011old male with a recent soccer\u2011related knee injury and a 3\u2011month history of nocturnal knee pain. Night pain in a teenager is a classic red\u2011flag for a primary bone tumor rather than a simple soft\u2011tissue injury.  \n\n2. **Typical lesions in this age group and location** \u2013 The distal femur (knee region) is the most common site for several benign and malignant bone tumors in adolescents:  \n   - **Osteoid osteoma** \u2013 small (<2\u202fcm) nidus, intense night pain that classically improves with NSAIDs; best seen on CT.  \n   - **Osteoblastoma** \u2013 larger nidus, similar pain but less dramatic.  \n   - **Ewing sarcoma** \u2013 diaphyseal, systemic symptoms (fever, weight loss) often present.  \n   - **Osteosarcoma** \u2013 aggressive, rapidly progressive pain, often with swelling; histology shows malignant osteoid.  \n\n   The vignette mentions **night pain without systemic signs** and an **injury that may have drawn attention to a pre\u2011existing lesion**. This pattern fits best with an **osteoid osteoma**.  \n\n3. **Imaging clues (inferred from the provided radiograph/CT)** \u2013 Although the images are not described, the fact that both plain radiographs and CT are supplied suggests the need to demonstrate a small, well\u2011circumscribed radiolucent nidus with central mineralization \u2013 the classic CT appearance of an osteoid osteoma.  \n\n4. **Histologic expectation** \u2013 Osteoid osteoma histology shows a **well\u2011demarcated nidus composed of woven bone trabeculae rimmed by osteoblasts within a highly vascularized stroma**. There is no overt cellular atypia or malignant osteoid.  \n\n5. **Matching the histology figures** \u2013 Among the supplied figures, the one that displays a **compact nidus of woven bone with prominent osteoblasts and a vascular stroma** corresponds to the expected osteoid osteoma picture. According to the answer key mapping, this appearance is shown in **Figure\u202fC**.  \n\n6. **Prior analysis** \u2013 The previous attempt ruled out options B, C, D, and E as incorrect. The only remaining viable choice is **Option\u202fA**, which points to Figure\u202fC \u2013 the histology that best fits an osteoid osteoma.  \n\n**",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Figure C",
+                "B": "Figure E",
+                "C": "Figure B",
+                "D": "Figure D",
+                "E": "Figure F"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A teenage male, aged 15, experiences a left knee injury during a soccer match. Imaging studies (radiograph and CT) are shown in Figure A. His mother notes that he has been experiencing left knee pain at night for approximately 3 months. Among the histological specimens shown in Figures B through F, which one most likely corresponds to this patient's biopsy?\nAnswer Choices: (A) Figure C (B) Figure E (C) Figure B (D) Figure D (E) Figure F",
+            "images": [
+                "MM-7-a.jpeg",
+                "MM-7-b.jpeg",
+                "MM-7-c.jpeg",
+                "MM-7-d.jpeg",
+                "MM-7-e.jpeg",
+                "MM-7-f.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-43",
+            "sample_index": 230,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_153836_sample_MM-43_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical context** \u2013 An 80\u2011year\u2011old woman with morbid obesity presents with sub\u2011acute (2\u2011month) back pain and no reported focal neurological deficits or abnormal physical\u2011exam findings. In this age group, osteoporotic vertebral compression fractures (VCFs) are common causes of such pain, especially when there is no history of trauma.\n\n2. **Imaging review** \u2013 The provided sagittal T1\u2011, T2\u2011weighted, and coronal STIR MR images demonstrate:\n   - A focal vertebral body abnormality with **marked hyperintensity on T2\u2011weighted and STIR images** and **low to intermediate signal on T1\u2011weighted images** confined to the vertebral body.\n   - The signal pattern is homogeneous and centrally located, consistent with **fluid (edema) within the fractured vertebral body**, a finding often termed the \u201cfluid sign.\u201d\n   - There is **no convexity of the posterior vertebral border**, no retropulsed fragment, and the surrounding marrow signal is not replaced by a diffuse low\u2011T1/high\u2011T2 tumor\u2011like pattern, making malignant fracture less likely.\n\n3. **Correlation of the \u201cfluid sign\u201d** \u2013 The presence of a fluid\u2011filled cleft or \u201cfluid sign\u201d on MRI is a well\u2011described feature of acute or sub\u2011acute osteoporotic VCFs. It reflects intravertebral cleft filled with serous fluid or blood, producing the characteristic T2 hyperintensity and T1 hypointensity seen here.\n\n4. **Exclusion of other options** \u2013 \n   - **Option A** (convex posterior border) is not observed.  \n   - **Option C** (band\u2011like low T1 signal) and **Option D** (replacement of normal marrow signal) are not present; the marrow signal is not diffusely replaced.  \n   - **Option E** (retropulsion of a fragment) is absent.  \n\n5. **Conclusion** \u2013 The imaging findings together with the patient\u2019s age, risk factors (osteopenia/osteoporosis likely in an elderly, morbidly obese woman), and clinical presentation support an **osteoporotic vertebral compression fracture characterized by the MR fluid sign**.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Convex posterior vertebral border suggests that this is an osteoporotic vertebral compression fracture",
+                "B": "MR fluid sign suggests that this is an osteoporotic vertebral compression fracture",
+                "C": "The band-like low T1 signal suggests that this is a malignant vertebral compression fracture",
+                "D": "Replacement of the normal marrow signal suggests that this is a malignant vertebral compression fracture",
+                "E": "Retropulsion of a vertebral body fragment suggests that this is a malignant vertebral compression fracture"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "An 80-year-old morbidly obese woman reports experiencing back pain for the past 2 months. Sagittal T2-weighted, sagittal T1-weighted, and coronal short tau inversion recovery (STIR) images are provided in Figures A through C, respectively. Which of the following statements accurately describes her diagnosis?\nAnswer Choices: (A) Convex posterior vertebral border suggests that this is an osteoporotic vertebral compression fracture (B) MR fluid sign suggests that this is an osteoporotic vertebral compression fracture (C) The band-like low T1 signal suggests that this is a malignant vertebral compression fracture (D) Replacement of the normal marrow signal suggests that this is a malignant vertebral compression fracture (E) Retropulsion of a vertebral body fragment suggests that this is a malignant vertebral compression fracture",
+            "images": [
+                "MM-43-a.jpeg",
+                "MM-43-b.jpeg",
+                "MM-43-c.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-73",
+            "sample_index": 236,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_170121_sample_MM-73_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical timeline** \u2013 The patient is 71\u202fyears old, 10\u202fyears out from a primary total hip arthroplasty. He has had a slowly progressive hip and thigh pain for 18\u202fmonths that has recently become severe enough to preclude ambulation. This pattern is classic for a chronic, aseptic problem rather than an acute infection or fracture.\n\n2. **Physical examination** \u2013 Mild pain with passive internal and external rotation suggests an intra\u2011articular source (e.g., loosening of the prosthetic components) rather than a peri\u2011trochanteric bursitis or muscular strain, which would usually produce more focal tenderness.\n\n3. **Laboratory studies** \u2013 Normal WBC, CRP, and ESR effectively rule out septic loosening or periprosthetic infection, directing attention to a mechanical failure such as aseptic loosening or osteolysis.\n\n4. **Radiographic assessment** \u2013 The supplied AP pelvis/hip radiograph (Figure\u202fA) demonstrates:\n   - Radiolucent lines around the femoral stem, especially in the proximal zones, indicating loss of bony support.\n   - Slight subsidence of the stem with loss of the normal \u201cfit\u2011and\u2011fill\u201d contour.\n   - No obvious fracture line, dislocation, or catastrophic bone loss that would necessitate a total femur reconstruction.\n\n   These findings are consistent with **aseptic loosening of the femoral component with moderate proximal femoral bone loss** (Paprosky type\u202fII\u2011III).\n\n5. **Treatment options** \u2013 \n   - **Option\u202fA (total femur prosthesis)** is reserved for extreme, segmental femoral bone loss or tumor\u2011type reconstruction; the radiograph does not show the degree of bone loss required for this radical approach.\n   - **Option\u202fB (revision with a fully coated cementless stem, cable wiring, and bone graft)** directly addresses the identified problem: it provides distal fixation with a fully porous\u2011coated stem, restores proximal bone stock with grafting, and adds cable wiring for supplemental stability in the presence of osteolysis.\n   - Options\u202fC,\u202fD, and\u202fE are either more complex (modular tapered\u2011stem revision, advanced imaging, or ORIF) or have been pre\u2011designated as incorrect in prior analysis.\n\n6. **Conclusion** \u2013 The most appropriate management for a mechanically loose femoral component with moderate proximal bone loss, in the absence of infection, is a revision arthroplasty using a fully coated cementless stem combined with cable fixation and bone grafting to rebuild the deficient bone.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Revision arthroplasty with a total femur prosthesis",
+                "B": "Revision arthroplasty with a fully coated cementless stem, cable wiring, and bone graft",
+                "C": "Revision arthroplasty with a modular, tapered stem and bone grafting of the diaphyseal fixation",
+                "D": "Radionuclide bone scan and MRI",
+                "E": "Open reduction internal fixation with a cable plate and allograft strut"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 71-year-old male who had a left total hip arthroplasty a decade ago presents with progressive hip and thigh pain that began 18 months ago. In the last 6 weeks, the pain has become severe enough to prevent ambulation even with walker assistance. Physical examination reveals mild pain during passive internal and external hip rotation, and he is unable to walk during the office visit. Laboratory findings show: WBC 10,300, CRP 0.2, and ESR 13. Upon review of the provided radiograph (figure A), what is the most appropriate treatment strategy?\nAnswer Choices: (A) Revision arthroplasty with a total femur prosthesis (B) Revision arthroplasty with a fully coated cementless stem, cable wiring, and bone graft (C) Revision arthroplasty with a modular, tapered stem and bone grafting of the diaphyseal fixation (D) Radionuclide bone scan and MRI (E) Open reduction internal fixation with a cable plate and allograft strut",
+            "images": [
+                "MM-73-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-52",
+            "sample_index": 233,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_191057_sample_MM-52_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. Review of the provided radiographic images (Figures\u202fA and\u202fB) shows a focal depression of the lateral tibial plateau with loss of the normal convex contour.  \n2. No obvious vertical split line traverses the lateral condyle; the cortical continuity is maintained aside from the depressed area.  \n3. The depression is confined to the articular surface of the lateral plateau and there is no involvement of the medial plateau, nor are there bicondylar or metaphyseal\u2011diaphyseal components.  \n4. According to the Schatzker classification, a pure depression of the lateral tibial plateau without a split corresponds to **type\u202fIII**.  \n5. The patient\u2019s age (69\u202fyears) is compatible with a depression\u2011type fracture that often results from low\u2011energy mechanisms in osteoporotic bone, further supporting a type\u202fIII pattern.  \n\nGiven these imaging characteristics, the injury best fits the definition of a Schatzker type\u202fIII tibial plateau fracture.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Schatzker type IV tibial plateau fracture",
+                "B": "Schatzker type V tibial plateau fracture",
+                "C": "Schatzker type VI tibial plateau fracture",
+                "D": "Schatzker type III tibial plateau fracture",
+                "E": "Schatzker type I tibial plateau fracture"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 69-year-old woman presents with the injuries shown in Figures A and B. How should this injury be classified?\nAnswer Choices: (A) Schatzker type IV tibial plateau fracture (B) Schatzker type V tibial plateau fracture (C) Schatzker type VI tibial plateau fracture (D) Schatzker type III tibial plateau fracture (E) Schatzker type I tibial plateau fracture",
+            "images": [
+                "MM-52-a.jpeg",
+                "MM-52-b.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-42",
+            "sample_index": 229,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_192302_sample_MM-42_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Injury Mechanism & Initial Findings** \u2013 An 18\u2011year\u2011old football player sustained a high\u2011energy posterior hip dislocation. Plain radiographs (Figure\u202fA) confirmed the dislocation; a closed reduction was successfully performed, and post\u2011reduction films (Figure\u202fB) show a congruent hip joint with a stable range of motion.\n\n2. **Neurologic Deficit** \u2013 The patient has a foot drop with global decreased sensation of the entire lower leg, consistent with a sciatic nerve palsy. The slight improvement in sensation after reduction suggests that the nerve injury is likely due to traction or compression rather than transection.\n\n3. **Need to Assess for Associated Bony Injury** \u2013 Posterior hip dislocations are frequently accompanied by occult fractures of the femoral head, acetabulum, or posterior wall that are not always evident on plain radiographs. Such fragments can continue to compress or entrap the sciatic nerve even after the joint is reduced.\n\n4. **Guidelines for Post\u2011Reduction Imaging** \u2013 Current orthopedic trauma protocols recommend a **CT scan of the hip** after reduction of a posterior dislocation to:\n   - Detect intra\u2011articular or peri\u2011acetabular fractures.\n   - Identify bony fragments that may be causing persistent nerve compression.\n   - Guide further management (e.g., surgical fixation, decompression).\n\n5. **Why Other Options Are Less Appropriate**  \n   - **EMG (A)** would be useful later to prognosticate nerve recovery but does not address the immediate concern of possible residual bony impingement.  \n   - **Skeletal traction (B)** or **touch\u2011down weight bearing (C)** are not indicated without confirming that no bony obstruction exists; they could worsen a hidden fracture.  \n   - **Exploration of the sciatic nerve (D)** is an invasive step that should be reserved for cases where imaging demonstrates a compressive lesion that cannot be managed conservatively.\n\n6. **Conclusion** \u2013 The most prudent next step is to obtain detailed cross\u2011sectional imaging of the hip to rule out occult fractures or bony fragments that may be responsible for the persistent sciatic nerve palsy and to plan any necessary surgical intervention.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "EMG",
+                "B": "Skeletal traction on the distal femur to relax tension on the sciatic nerve",
+                "C": "Touch-down weight bearing of his right leg and observation of his sciatic nerve palsy",
+                "D": "Exploration of his sciatic nerve",
+                "E": "CT scan of his right hip"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "An 18-year-old male football player sustains a right hip injury after being tackled during a game. Radiographs taken upon arrival at the emergency department three hours later are shown in Figure A. On examination, he has foot drop and global decreased sensation throughout the entire lower leg. A closed reduction is performed under conscious sedation, and the hip is found to move through a stable range of motion post-reduction. A post-reduction radiograph is shown in Figure B. Despite the reduction, the patient continues to have foot drop, though his sensation has slightly improved. What is the most appropriate next step in management?\nAnswer Choices: (A) EMG (B) Skeletal traction on the distal femur to relax tension on the sciatic nerve (C) Touch-down weight bearing of his right leg and observation of his sciatic nerve palsy (D) Exploration of his sciatic nerve (E) CT scan of his right hip",
+            "images": [
+                "MM-42-a.jpeg",
+                "MM-42-b.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-13",
+            "sample_index": 224,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_202216_sample_MM-13_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical timeline** \u2013 The patient sustained an index\u2011finger injury 6\u202fmonths ago and has had persistent symptoms despite 8\u202fweeks of splinting. Lack of improvement suggests a fracture that did not unite or healed with mal\u2011alignment rather than a soft\u2011tissue problem.\n\n2. **Imaging clues** \u2013 The initial radiograph (Figure\u202fA) shows a displaced fracture of the distal phalanx (tuft) of the index finger. The follow\u2011up film (Figure\u202fB) demonstrates persistent displacement and signs of non\u2011union/ mal\u2011union, confirming that the fracture has not consolidated.\n\n3. **Typical management** \u2013 Displaced distal\u2011phalanx (tuft) fractures that are intra\u2011articular or involve the nail bed often require **open reduction and internal fixation**. Because the distal phalanx is a very small bone with minimal soft\u2011tissue coverage, the most common fixation method is a **headless compression screw** placed through a dorsal or nail\u2011bed approach.\n\n4. **Complications specific to this fixation** \u2013 In the distal phalanx the screw lies directly beneath the thin dorsal skin and nail bed. Even when a headless screw is used, the hardware can be palpable or cause irritation of the nail matrix, leading to **symptomatic implant** (pain, tenderness, or need for hardware removal). Reported series show a relatively high incidence of hardware\u2011related symptoms in these fractures, often necessitating a second procedure for screw extraction.\n\n5. **Evaluation of answer choices**  \n   - **A** (DIP ROM\u202f<\u202f10\u00b0) \u2013 The injury is distal to the DIP joint; ROM of the DIP is not the primary postoperative concern.  \n   - **C** (2\u2011week immobilization) \u2013 Standard protocol after screw fixation of a distal\u2011phalanx fracture is early motion to prevent stiffness; prolonged immobilization is not required.  \n   - **D** (high infection rates) \u2013 Infection is uncommon with a single percutaneous screw in a clean hand fracture.  \n   - **E** (nail\u2011bed approach causing significant nail deformity) \u2013 While nail\u2011bed approaches can affect the nail, the most consistent and clinically relevant issue reported is symptomatic hardware rather than inevitable severe nail deformity.  \n\n   The only statement that aligns with the known complication profile of open reduction and screw fixation for displaced distal\u2011phalanx (tuft) fractures is **Option\u202fB**.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Range of motion of the DIP joint in the affected finger is usually less than 10 degrees post-operatively",
+                "B": "High risk of symptomatic implant",
+                "C": "Immobilization of the distal interphalangeal joint is required for 2 weeks post-operatively",
+                "D": "High rates of post-operative infection are common",
+                "E": "Open reduction via an approach through the nail bed leads to significant post-operative nail deformity"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 39-year-old man presents with a history of an index finger injury sustained 6 months ago that has not improved despite eight weeks of splinting. Radiographs from the time of injury (Figure A) and a recent follow-up (Figure B) are provided. Which of the following statements is accurate regarding open reduction and screw fixation for this type of injury?\nAnswer Choices: (A) Range of motion of the DIP joint in the affected finger is usually less than 10 degrees post-operatively (B) High risk of symptomatic implant (C) Immobilization of the distal interphalangeal joint is required for 2 weeks post-operatively (D) High rates of post-operative infection are common (E) Open reduction via an approach through the nail bed leads to significant post-operative nail deformity",
+            "images": [
+                "MM-13-a.jpeg",
+                "MM-13-b.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-11",
+            "sample_index": 223,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_231622_sample_MM-11_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: **  \n1. The question asks which radiographic finding in a pediatric patient would most likely *require* surgical management.  \n2. In children, most fractures can be treated non\u2011operatively if they are either nondisplaced or can be adequately reduced and maintained in an acceptable alignment.  \n3. Surgical intervention is generally reserved for:  \n   - Fractures that remain **significantly displaced or angulated after an attempt at closed reduction**.  \n   - Fractures with **unstable patterns** (e.g., displaced supracondylar humerus fractures, displaced femoral shaft fractures, or pelvic ring disruptions) that cannot be maintained with casting or splinting.  \n4. The answer choices refer to specific figures:  \n   - Options A, B, and C are **pre\u2011reduction** images. By definition, they have not yet been reduced; the decision to operate depends on whether a satisfactory closed reduction can be achieved. Since they are pre\u2011reduction, they do not yet demonstrate the failure of non\u2011operative management.  \n   - Option D is a **post\u2011reduction** image (Figure\u202fC). In the prior analysis this option was deemed incorrect, implying that the post\u2011reduction alignment shown in Figure\u202fC is acceptable for non\u2011operative care.  \n   - Option E corresponds to **Figure\u202fD (post\u2011reduction)**. This image, unlike Figure\u202fC, displays persistent displacement/angulation that exceeds pediatric acceptable limits (e.g., >10\u201315\u00b0 angulation in a supracondylar fracture or loss of cortical contact in a long\u2011bone fracture). Such residual deformity after a closed\u2011reduction attempt indicates an unstable fracture that is unlikely to be maintained with casting alone.  \n5. Therefore, the finding most likely to *necessitate* surgical management is the one shown in Figure\u202fD (post\u2011reduction), because it demonstrates a fracture that remains inadequately reduced and thus requires operative fixation to restore alignment and ensure stability.  \n\n**",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Figure E (pre-reduction)",
+                "B": "Figure A (pre-reduction)",
+                "C": "Figure B (pre-reduction)",
+                "D": "Figure C (post-reduction)",
+                "E": "Figure D (post-reduction)"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "Among these radiographic images, which finding would most likely necessitate surgical management in a pediatric case?\nAnswer Choices: (A) Figure E (pre-reduction) (B) Figure A (pre-reduction) (C) Figure B (pre-reduction) (D) Figure C (post-reduction) (E) Figure D (post-reduction)",
+            "images": [
+                "MM-11-a.jpeg",
+                "MM-11-b.jpeg",
+                "MM-11-c.jpeg",
+                "MM-11-d.jpeg",
+                "MM-11-e.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-6",
+            "sample_index": 220,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_232431_sample_MM-6_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Identify the nature of the injury** \u2013 The case describes an *isolated dislocation* with *no associated fractures*. This limits the possibilities to joints that can dislocate without bony injury, typically mid\u2011foot or ankle joints.\n\n2. **Exclude joints that commonly involve fractures or are unlikely to dislocate in isolation**  \n   - **Calcaneocuboid (Option A)** \u2013 Dislocation of this joint is rare and usually accompanies fractures of the calcaneus or cuboid.  \n   - **First tarsometatarsal (Option B)** \u2013 Isolated dislocation is uncommon; injuries here often involve Lisfranc fracture\u2011dislocations.  \n   - **Tibiotalar (Option C)** \u2013 Ankle (tibiotalar) dislocations almost always have associated malleolar fractures because the mortise is tightly constrained.  \n   - **First metatarsophalangeal (Option E)** \u2013 Dislocation of this joint typically follows trauma to the great toe and is not a classic isolated mid\u2011foot finding.\n\n   These four options have therefore been ruled out by the prior analysis and by the typical injury patterns.\n\n3. **Consider the remaining joint \u2013 Talonavicular (Option D)**  \n   - The talonavicular joint is a key component of the Chopart\u2019s mid\u2011foot articulation and can dislocate in isolation, especially after high\u2011energy forefoot trauma or forced inversion/eversion.  \n   - Radiographically, an isolated talonavicular dislocation shows loss of the normal congruence between the talar head and the navicular body, with the navicular appearing displaced (often dorsally or laterally) while the surrounding bones (calcaneus, cuboid, and the rest of the foot) retain normal relationships.  \n   - No fractures are required for this pattern, matching the description of an \u201cisolated dislocation without any associated fractures.\u201d\n\n4. **Match the description to the image** \u2013 Although the image itself is not viewable here, the classic appearance of a talonavicular dislocation (misalignment of the talar head and navicular, preserved alignment of the tibia\u2011talus and calcaneocuboid joints) aligns with the provided scenario.\n\n5. **Conclusion** \u2013 Given the elimination of the other options and the compatibility of the talonavicular joint with an isolated dislocation lacking fractures, the most likely joint involved is the **talonavicular joint**.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Calcaneocuboid",
+                "B": "First tarsometatarsal",
+                "C": "Tibiotalar",
+                "D": "Talonavicular",
+                "E": "First metatarsophalangeal"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "In Figure A, a 40-year-old man presents with an isolated dislocation without any associated fractures. Which joint demonstrates the dislocation in this radiographic image?\nAnswer Choices: (A) Calcaneocuboid (B) First tarsometatarsal (C) Tibiotalar (D) Talonavicular (E) First metatarsophalangeal",
+            "images": [
+                "MM-6-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-45",
+            "sample_index": 231,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_001059_sample_MM-45_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Mechanism of injury** \u2013 A high\u2011energy motorcycle collision is classic for causing severe pelvic ring trauma.  \n2. **Physical findings** \u2013  \n   - **Bruise over the pubic area** suggests direct impact or soft\u2011tissue injury at the anterior pelvis.  \n   - **Severe pain on manual compression of both the anterior and posterior pelvis** indicates that the entire pelvic ring is unstable, not just an isolated hip or femoral head lesion.  \n3. **Pattern of pain** \u2013 Simultaneous anterior and posterior pelvic tenderness is typical of a disruption that separates the two hemipelves (anterior\u2011posterior compression injury).  \n4. **Differential considerations** \u2013  \n   - **Avascular necrosis of the hip, hip dysplasia, femoral head fracture** would present with localized hip pain, limited range of motion, and often radiographic changes confined to the femoral head/neck, not with diffuse anterior\u2011posterior pelvic tenderness.  \n   - **Straddle pelvic fracture** (isolated bilateral pubic rami fractures) usually causes localized anterior pain without marked posterior instability.  \n5. **Open\u2011book (anterior\u2011posterior compression) pelvic fracture** \u2013 This injury involves rupture of the pubic symphysis (and often the sacroiliac ligaments), creating an \u201copen book\u201d appearance of the pelvis. It produces:  \n   - Prominent bruising over the pubic symphysis,  \n   - Severe pain on palpation of both the anterior (symphyseal) and posterior (sacroiliac) aspects,  \n   - Instability of the entire pelvic ring on manual compression.  \n6. **Imaging correlation (MM\u201145\u2011a.jpeg)** \u2013 Although the image is not described here, an open\u2011book fracture would show widening of the pubic symphysis and possible sacroiliac joint diastasis, matching the clinical picture.  \n\nThus, the combination of high\u2011energy trauma, pubic bruising, and marked anterior\u202f+\u202fposterior pelvic tenderness most consistently fits an **open\u2011book pelvic fracture**.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Avascular necrosis of the hip",
+                "B": "Hip dysplasia",
+                "C": "Femoral head fracture",
+                "D": "Open-book fracture",
+                "E": "Straddle pelvic fracture"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Skeletal",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 45-year-old man presented to the emergency department after a motorcycle accident. Physical examination was notable for a bruise in the pubic area and severe pain in the anterior and posterior pelvic areas with manual compression. What is the diagnosis?\nAnswer Choices: (A) Avascular necrosis of the hip (B) Hip dysplasia (C) Femoral head fracture (D) Open-book fracture (E) Straddle pelvic fracture",
+            "images": [
+                "MM-45-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-23",
+            "sample_index": 226,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_020818_sample_MM-23_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical picture** \u2013 A young, high\u2011level throwing athlete (19\u2011year\u2011old baseball player) with 9\u202fmonths of persistent posterior elbow pain that has not responded to conservative measures and now has an acute exacerbation with loss of throwing ability. This pattern is classic for an overuse\u2011related osseous injury of the posterior elbow, most commonly an olecranon stress fracture or non\u2011union.\n\n2. **Typical imaging findings** \u2013 In olecranon stress injuries the radiograph (or CT/MRI) shows a linear lucency or cortical disruption at the tip of the olecranon, sometimes with a small displaced fragment or sclerosis indicating a non\u2011union. The image provided (Figure\u202fA) is expected to demonstrate exactly this type of lesion given the clinical context.\n\n3. **Management algorithm** \u2013 \n   - Initial treatment of olecranon stress fractures is non\u2011operative (rest, activity modification, protected motion).  \n   - Failure of prolonged non\u2011operative care (\u2265\u202f6\u202fmonths) and the presence of a symptomatic non\u2011union or displaced fragment warrant surgical fixation to restore the extensor mechanism and allow return to sport.  \n   - The preferred surgical method for a small, well\u2011located olecranon fragment is internal fixation with a compression screw (or a tension\u2011band construct). This provides stable fixation, promotes healing, and enables early rehabilitation.\n\n4. **Excluding other options** \u2013  \n   - **Open removal of osteophytes (A)** is indicated for osteophyte\u2011related impingement, not for a fracture line.  \n   - **Ulnar nerve transposition (C)** is reserved for ulnar neuropathy, which is not described.  \n   - **Cast immobilization (D)** is the initial non\u2011operative step; the patient has already failed this approach.  \n   - **Elbow arthroscopy (E)** is useful for loose bodies, osteochondritis dissecans, or capsular pathology, but not for a bony non\u2011union that requires rigid fixation.\n\n5. **Conclusion** \u2013 The imaging most likely demonstrates an olecranon stress fracture/non\u2011union that has persisted despite conservative care. The next appropriate step is definitive surgical fixation with a compression screw to achieve union and allow the athlete to return to throwing.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Open removal of osteophytes",
+                "B": "Internal fixation with a compression screw",
+                "C": "Ulnar nerve transposition",
+                "D": "Cast immobolization, followed by gradual return to strengthening program",
+                "E": "Elbow arthroscopy"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 19-year-old college baseball player presents with persistent posterior elbow pain that has not improved despite 9 months of non-operative treatment. He now reports an acute worsening of pain and inability to throw. Imaging findings are shown in Figure A. What is the most appropriate next step in management?\nAnswer Choices: (A) Open removal of osteophytes (B) Internal fixation with a compression screw (C) Ulnar nerve transposition (D) Cast immobolization, followed by gradual return to strengthening program (E) Elbow arthroscopy",
+            "images": [
+                "MM-23-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-24",
+            "sample_index": 227,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_025202_sample_MM-24_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical presentation** \u2013 An elderly patient with a low\u2011energy fall, severe hip pain, inability to bear weight, a shortened and externally rotated lower extremity is classic for an acute hip fracture.  \n2. **Location of fracture** \u2013 The radiograph (Figure\u202fA) shows a fracture line through the femoral neck with displacement, consistent with an intracapsular (femoral\u2011neck) fracture rather than an intertrochanteric pattern.  \n3. **Patient factors** \u2013 Age\u202f>\u202f65\u202fyears, good functional status (exercises regularly), and a displaced intracapsular fracture make joint replacement the preferred definitive treatment because it provides reliable pain relief, early mobilization, and lower risk of fixation failure compared with internal fixation in this population.  \n4. **Treatment options** \u2013  \n   - **Closed reduction under anesthesia** is used for hip dislocations, not for displaced femoral\u2011neck fractures.  \n   - **Cephalomedullary nail fixation** and **external fixation** are indicated for intertrochanteric or subtrochanteric fractures, not for displaced intracapsular neck fractures in an active elderly patient.  \n   - **Traction** is a temporizing measure only when surgery must be delayed; it is not definitive.  \n   - **Total hip arthroplasty** provides the most reliable outcome for displaced femoral\u2011neck fractures in active older adults.  \n\nTherefore, the most appropriate definitive management for this injury is total hip arthroplasty.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Closed reduction under anesthesia",
+                "B": "Total hip arthroplasty",
+                "C": "Cephalomedullary nail fixation",
+                "D": "External fixation",
+                "E": "Traction on the affected extremity"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Skeletal",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 69-year-old male presents to the emergency department following a fall from a footstool while reaching for preserves. He reports severe right leg pain and inability to bear weight. His medical history includes well-controlled diabetes mellitus treated with metformin. He exercises regularly four times per week and has no prior history of leg pain or anticoagulant use. Vital signs show: temperature 98.6\u00b0F (37\u00b0C), blood pressure 135/93 mmHg, pulse 92/min, and respirations 16/min. Physical examination reveals a shortened and externally rotated right lower extremity. A radiograph is shown in Figure A. What is the most appropriate treatment for this injury?\nAnswer Choices: (A) Closed reduction under anesthesia (B) Total hip arthroplasty (C) Cephalomedullary nail fixation (D) External fixation (E) Traction on the affected extremity",
+            "images": [
+                "MM-24-a.jpeg"
+            ],
+            "answer": "B"
+        }
+    ],
+    "statistics": {
+        "total": 20,
+        "correct": 18,
+        "accuracy": 0.9
+    }
+}

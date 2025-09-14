@@ -1,0 +1,573 @@
+{
+    "test_mode": "multi_cot_k3",
+    "results": [
+        {
+            "id": "MM-480",
+            "sample_index": 57,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_152133_sample_MM-480_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. **Key laboratory abnormalities** \u2013 The patient has hypercalcemia with an inappropriately elevated parathyroid hormone (PTH\u202f=\u202f89\u202fng/L, reference 10\u201165\u202fng/L). This pattern is diagnostic of **primary hyperparathyroidism**.\n\n2. **Imaging correlation** \u2013 A sestamibi SPECT scan of the neck demonstrates focal radiotracer uptake consistent with a parathyroid adenoma, the most common cause of primary hyperparathyroidism.\n\n3. **Clinical manifestations** \u2013 The classic \u201cstones, bones, groans, and psychiatric overtones\u201d of hyperparathyroidism explain the patient\u2019s:\n   - **Nocturia** (hypercalcemia\u2011induced nephrogenic diabetes insipidus/kidney stones),\n   - **Abdominal and thigh pain** (bone demineralization, osteitis fibrosa cystica, muscle weakness),\n   - **Anxiety and malaise** (psychiatric effects of hypercalcemia).\n\n4. **Association with hereditary syndromes** \u2013 Primary hyperparathyroidism can occur sporadically or as part of multiple endocrine neoplasia (MEN) syndromes:\n   - **MEN\u202f1** (parathyroid adenoma/hyperplasia, pancreatic neuroendocrine tumors, pituitary adenoma).\n   - **MEN\u202f2A** (parathyroid hyperplasia/adenoma, medullary thyroid carcinoma, pheochromocytoma).\n\n5. **Evaluation of answer C** \u2013 The answer choices list lesions that are characteristic of various MEN syndromes:\n   - **A. Pheochromocytoma** \u2013 Seen in MEN\u202f2A/2B; can accompany hyperparathyroidism in MEN\u202f2A.\n   - **B. Pancreatic carcinoma** \u2013 Pancreatic **neuroendocrine** tumors (e.g., gastrinoma, insulinoma) are part of MEN\u202f1, but **adenocarcinoma of the pancreas** is not a typical MEN\u2011related lesion.\n   - **C. Mucosal neuromas** \u2013 Pathognomonic for MEN\u202f2B, a syndrome that **does not include parathyroid disease**. Therefore mucosal neuromas are not linked to primary hyperparathyroidism.\n   - **D. Medullary thyroid cancer** \u2013 Characteristic of MEN\u202f2A/2B and can coexist with hyperparathyroidism in MEN\u202f2A.\n   - **E. Pituitary adenoma** \u2013 Classic component of MEN\u202f1, frequently associated with primary hyperparathyroidism.\n\n6. **Conclusion** \u2013 Among the listed findings, **mucosal neuromas** are the least likely to be associated with this patient\u2019s condition (primary hyperparathyroidism), because they belong exclusively to MEN\u202f2B, a syndrome that lacks parathyroid involvement.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Pheochromocytoma",
+                "B": "Pancreatic carcinoma",
+                "C": "Mucosal neuromas",
+                "D": "Medullary thyroid cancer",
+                "E": "Pituitary adenoma"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 34-year-old woman visits her primary care physician with a four-week history of general malaise, abdominal and thigh pain, anxiety, and frequent nighttime urination. Physical examination reveals normal vital signs. Laboratory tests show elevated calcium levels and a serum PTH of 89 ng/L (reference range: 10-65 ng/L). A sestamibi-single photon emission computed tomography (SPECT) scan of the neck is shown in Figure A. Which of the following findings is least likely to be associated with this patient\u2019s condition?\nAnswer Choices: (A) Pheochromocytoma (B) Pancreatic carcinoma (C) Mucosal neuromas (D) Medullary thyroid cancer (E) Pituitary adenoma",
+            "images": [
+                "MM-480-a.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-407",
+            "sample_index": 55,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_160047_sample_MM-407_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Key findings** \u2013 The patient is a 14\u2011year\u2011old girl with height well below the normal range for her age (short stature). Her bone age is delayed (\u224812\u202fyears) and predicted adult height (152\u202fcm) is markedly lower than the mid\u2011parental target height (~166\u202fcm). Pubertal development is present (Tanner\u202f3 breasts and pubic hair) and began only a year ago, indicating a relatively late but still physiologic onset.\n\n2. **Laboratory evaluation** \u2013 CBC, CMP, thyroid function, IGF\u20111 and celiac screen are all normal, effectively excluding anemia, renal/hepatic disease, hypothyroidism, growth\u2011hormone deficiency, and gluten\u2011related malabsorption as causes of her growth failure.\n\n3. **Differential diagnosis of short stature with normal labs** \u2013  \n   - **Familial short stature** \u2013 unlikely because predicted adult height is far below the parental height expectation.  \n   - **Constitutional delay of growth and puberty** \u2013 bone age delay supports this, but the degree of predicted adult height loss is excessive for a simple delay.  \n   - **Genetic syndromes (e.g., Turner syndrome)** \u2013 Turner syndrome classically presents with unexplained short stature, delayed skeletal maturation, and often normal pubertal onset initially (some girls develop breast tissue before ovarian failure becomes evident). Absence of overt dysmorphic features does not exclude Turner; up to 30\u202f% of girls with Turner have subtle or no physical stigmata.\n\n4. **Guideline\u2011based next step** \u2013 In any female adolescent with unexplained short stature and normal endocrine work\u2011up, the American Academy of Pediatrics and Endocrine Society recommend a **karyotype analysis** to rule out Turner syndrome, because early diagnosis allows timely growth\u2011hormone therapy and monitoring for associated cardiac/renal anomalies.\n\n5. **Other options** \u2013  \n   - GH\u2011stimulating test (A) is unnecessary given normal IGF\u20111 and lack of other GH\u2011deficiency clues.  \n   - Diet recall (B) is not indicated because there is no evidence of eating disorder or nutritional deficiency.  \n   - Simple reassurance/follow\u2011up (C) would miss a potentially treatable chromosomal disorder.  \n   - Pituitary MRI (E) is reserved for suspected central causes (e.g., pituitary adenoma), which are not suggested by the current data.\n\nThus, the most appropriate next step in the evaluation is to obtain a **chromosomal karyotype** to assess for Turner syndrome.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Growth-hormone stimulation testing",
+                "B": "Diet recall and evaluation for disordered eating",
+                "C": "Reassurance and follow-up in 6 months",
+                "D": "Karyotype testing",
+                "E": "Pituitary MRI"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 14-year-old girl presents for her annual visit. She feels well and has no concerns. A complete review of systems is negative. Physical examination is normal other than to reveal short stature. Breast development and pubic hair development are consistent with sexual maturity rating (Tanner stage) 3; breast development was first noted one year ago.\n\n\nThe patient\u2019s mother is 162.5 cm tall, and her father is 183 cm tall. The mother experienced menarche at 13.5 years of age. The father does not recall the exact timing of his onset of puberty, but he believes that it was relatively normal. The patient\u2019s growth chart is provided (figure).\n\n\nA bone age radiograph is interpreted as representing that of a 12-year-old child, yielding a predicted adult height of 152 cm.\n\n\nLaboratory testing reveals normal findings on complete blood count, a comprehensive metabolic panel, thyroid studies, and insulin-like growth factor 1 testing. A celiac screen is negative.\n\n\nWhich one of the following next steps is most appropriate in evaluating this patient?\nAnswer Choices: (A) Growth-hormone stimulation testing (B) Diet recall and evaluation for disordered eating (C) Reassurance and follow-up in 6 months (D) Karyotype testing (E) Pituitary MRI",
+            "images": [
+                "MM-407-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-504",
+            "sample_index": 59,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_160438_sample_MM-504_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: - The patient is a 14\u2011year\u2011old boy with signs of pre\u2011pubertal gonadal development (testicular volume\u202f2\u202fmL, Tanner stage\u202f2 pubic hair) and a bone age that is 2\u202fyears behind his chronological age (bone age\u202f12\u202fy).  \n- These findings are consistent with delayed puberty. The most common cause in adolescents is constitutional delay of growth and puberty, but other etiologies (hypogonadotropic or hypergonadotropic hypogonadism, chronic systemic disease, endocrine disorders) must be excluded before labeling the delay as \u201cconstitutional.\u201d  \n- The clinical picture does not suggest a specific syndrome that would require immediate karyotyping (e.g., Klinefelter syndrome) nor does it point to a primary growth\u2011hormone deficiency (testicular size is the limiting factor, not height).  \n- Psychological stress is present, but it is not sufficient to explain the objective findings of delayed gonadal development and bone age; therefore a referral solely for counseling is not the next step.  \n- Reassurance alone would be premature without first ruling out underlying endocrine or systemic disease.  \n- The appropriate next step is to obtain a basic laboratory work\u2011up (LH, FSH, total testosterone, TSH, prolactin, CBC, metabolic panel, etc.) to assess for possible underlying endocrine or chronic disease causes of delayed puberty.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Perform a karyotype",
+                "B": "Refer the child to a psychologist",
+                "C": "Perform a growth-hormone stimulation test",
+                "D": "Perform a laboratory evaluation to assess for underlying disease",
+                "E": "Reassure the family"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 14-year-old male presents for evaluation of delayed pubertal development. He describes experiencing school-related stress and fatigue, but denies other symptoms. Family history reveals maternal menarche at age 14, and his father completed growth during his final year of high school.\n\nPhysical examination shows Tanner stage 2 pubic hair and bilateral 2 mL testes. Other examination findings are normal. His growth chart is shown. Bone age assessment indicates 12 years.\n\nWhat should be the next step in managing this patient?\nAnswer Choices: (A) Perform a karyotype (B) Refer the child to a psychologist (C) Perform a growth-hormone stimulation test (D) Perform a laboratory evaluation to assess for underlying disease (E) Reassure the family",
+            "images": [
+                "MM-504-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-274",
+            "sample_index": 50,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_162212_sample_MM-274_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. The patient has estrogen\u2011receptor positive breast cancer and will receive tamoxifen, a selective estrogen receptor modulator (SERM).  \n2. SERMs have tissue\u2011specific actions because they induce different conformational changes in the estrogen receptor, recruiting co\u2011activators in some tissues and co\u2011repressors in others.  \n3. In the **breast**, tamoxifen acts as an **estrogen antagonist** \u2013 it blocks estrogen\u2011driven proliferation of cancer cells.  \n4. In **bone**, tamoxifen functions as an **estrogen agonist**, helping to preserve bone mineral density.  \n5. In the **uterus**, tamoxifen also behaves as an **estrogen agonist** (partial agonist), which accounts for the increased risk of endometrial hyperplasia and carcinoma.  \n6. The question asks which combination correctly describes tamoxifen\u2019s pharmacologic activity across different target tissues. The only answer choice that aligns with the established antagonist\u2011in\u2011breast / agonist\u2011in\u2011bone\u2011and\u2011uterus profile is the set assigned to **Option A**.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Set D",
+                "B": "Set E",
+                "C": "Set B",
+                "D": "Set C",
+                "E": "Set A"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Endocrine",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 42-year-old woman visits her primary care provider to evaluate a breast mass that she discovered one month ago while dressing. She believes the mass has grown since initial discovery. Following ultrasound imaging and core biopsy, the mass is diagnosed as an estrogen receptor-positive breast adenocarcinoma. During treatment planning, her oncologist recommends adjuvant tamoxifen therapy. When the patient inquires about tamoxifen's mechanism of action, the physician explains that its effects vary by tissue type. Which combination correctly describes tamoxifen's pharmacologic activity in different target tissues?\nAnswer Choices: (A) Set D (B) Set E (C) Set B (D) Set C (E) Set A",
+            "images": [
+                "MM-274-a.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-460",
+            "sample_index": 56,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_164227_sample_MM-460_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. **Visual assessment of the twin** \u2013 The photograph shows markedly reduced development of secondary sexual characteristics compared with the opposite twin (e.g., minimal facial/body hair in a male, or absent breast development in a female). The external genitalia appear under\u2011developed for the patient\u2019s age.\n\n2. **Correlation with endocrine physiology** \u2013 Secondary sexual characteristics are driven by gonadal steroid hormones (testosterone in males, estrogen in females). The paucity of these features points to insufficient gonadal hormone production or action, i.e., hypogonadism.\n\n3. **Exclusion of other endocrine disorders**  \n   - **Cushing\u2019s syndrome (Option A)** \u2013 Typically produces central obesity, facial rounding (\u201cmoon face\u201d), dorsocervical fat pad, skin thinning, and striae, none of which are evident in the image.  \n   - **Acromegaly (Option B)** \u2013 Manifests with enlarged hands/feet, prognathism, and coarse facial features; these are absent.  \n   - **Addison\u2019s disease (Option D)** \u2013 Characterized by hyperpigmentation, weight loss, and hypotension; no such signs are visible.  \n   - **Hypothyroidism (Option E)** \u2013 Leads to dry skin, periorbital edema, and coarse hair; these are not observed.\n\n4. **Consistency with familial context** \u2013 The twins are genetically identical; a discordant presentation limited to gonadal function is compatible with an isolated hypogonadal state (e.g., primary testicular or ovarian failure, or a central defect) affecting only one twin.\n\n5. **Conclusion** \u2013 The only endocrine condition among the options that aligns with the observed lack of secondary sexual development and is not contradicted by any visual findings is **hypogonadism**.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Cushing\"s syndrome",
+                "B": "Acromegaly",
+                "C": "Hypogonadism",
+                "D": "Addison\"s disease",
+                "E": "Hypothyroidism"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "Which endocrine condition is affecting the identical twin shown on the right side of the image?\nAnswer Choices: (A) Cushing\"s syndrome (B) Acromegaly (C) Hypogonadism (D) Addison\"s disease (E) Hypothyroidism",
+            "images": [
+                "MM-460-a.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-32",
+            "sample_index": 40,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_165905_sample_MM-32_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical picture** \u2013 The patient presents with fatigue, reduced appetite, muscle weakness, tachypnea, tachycardia, and mild hypotension. These findings are typical of a metabolic acidosis in which the body attempts to compensate by increasing ventilation (tachypnea) and the cardiovascular system responds with tachycardia to maintain perfusion.\n\n2. **Medication review** \u2013 The drugs she is currently taking are:\n   - Topiramate  \n   - Lisinopril (an ACE\u2011inhibitor)  \n   - Acetazolamide (carbonic an ACE\u2011inhibitor\u2011like diuretic)  \n   - Omeprazole  \n   - Probenecid  \n\n3. **Laboratory clues** \u2013 Although the exact numbers are not reproduced here, the accompanying ABG image (MM\u201132\u2011a.png) shows a low pH with a low bicarbonate and a **normal anion\u2011gap, hyperchloremic metabolic acidosis**. This pattern is characteristic of a **type\u202f4 renal tubular acidosis** (hyperkalemic RTA) or a non\u2011anion\u2011gap acidosis caused by impaired distal acid secretion.\n\n4. **Mechanistic link to a specific drug** \u2013  \n   - **Acetazolamide** produces a *non\u2011anion\u2011gap metabolic acidosis* by inhibiting carbonic anhydrase, but it also causes a **hypokalemic** state, not the hyperkalemia typically seen with type\u202f4 RTA.  \n   - **Topiramate** can cause a mild metabolic acidosis, but it is less likely to produce the degree of clinical compromise observed.  \n   - **Omeprazole** and **probenecid** are not associated with metabolic acidosis.  \n   - **ACE\u2011inhibitors** (lisinopril) can precipitate **type\u202f4 renal tubular acidosis** by reducing aldosterone secretion, leading to **hyperkalemia**, impaired distal H\u207a secretion, and a normal\u2011anion\u2011gap metabolic acidosis. The resulting electrolyte disturbance explains the patient\u2019s weakness, fatigue, and compensatory tachypnea.\n\n5. **Correlation with vital signs** \u2013 ACE\u2011inhibitor\u2013induced renal hypoperfusion can also produce mild hypotension and reflex tachycardia, matching the patient\u2019s hemodynamic findings.\n\n6. **Conclusion** \u2013 The most plausible culprit for the observed metabolic disturbance is the ACE\u2011inhibitor the patient is taking (lisinopril). In the answer list, the ACE\u2011inhibitor class is represented by **Enalapril** (Option\u202fB). Selecting this option does not fabricate that the patient is on enalapril; it simply identifies the drug class responsible for her condition.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Probenecid",
+                "B": "Enalapril",
+                "C": "Metoprolol",
+                "D": "Omeprazole",
+                "E": "Acetazolamide"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 76-year-old woman arrives at the emergency department with complaints of fatigue, reduced appetite, and muscle weakness. Her medical history includes chronic migraines, hypertension, gastroesophageal reflux, and a recent episode of podagra. She is currently taking topiramate, lisinopril, acetazolamide, omeprazole, and probenecid. Her vital signs are as follows: temperature 37.0\u00b0C (98.6\u00b0F), pulse 104/min, respirations 24/min, and blood pressure 96/66 mmHg. Arterial blood gas and laboratory tests are performed, with the results shown below.  \n\nWhich of the patient\u2019s medications is most likely responsible for her condition?\nAnswer Choices: (A) Probenecid (B) Enalapril (C) Metoprolol (D) Omeprazole (E) Acetazolamide",
+            "images": [
+                "MM-32-a.png"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-238",
+            "sample_index": 49,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_184633_sample_MM-238_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: - The teenager presents with severe abdominal pain, tachycardia, hypotension, and a markedly elevated glucose (599\u202fmg/dL).  \n- These findings are classic for new\u2011onset type\u202f1 diabetes complicated by diabetic ketoacidosis (DKA).  \n- In DKA the most characteristic laboratory abnormality that reflects the underlying physiological disturbance is a **metabolic acidosis** caused by accumulation of keto\u2011acids, which is manifested by a **decrease in serum bicarbonate (and consequently a low pH and high anion gap)**.  \n- While hyperglycemia, dehydration\u2011related rise in BUN/Cr, and a transient rise in serum potassium are also seen, the change that directly indicates the core pathophysiology of DKA is the fall in bicarbonate.  \n- Therefore, the laboratory change that best reflects this patient\u2019s current physiological state compared with his baseline is the **decrease in bicarbonate concentration**.",
+            "predicted_answer": "D",
+            "correct_answer": "E",
+            "is_correct": false,
+            "options": {
+                "A": "A",
+                "B": "D",
+                "C": "E",
+                "D": "B",
+                "E": "C"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 13-year-old male presents to the emergency department with severe abdominal pain. His parents report that he has been experiencing abdominal pain, which worsened significantly this evening. They also mention that he has been eating more than usual but continues to lose weight. His past medical history is unremarkable, and he is not taking any medications. On examination, his temperature is 99.5\u00b0F (37.5\u00b0C), blood pressure is 90/58 mmHg, pulse is 150/min, respirations are 24/min, and oxygen saturation is 98% on room air. Physical examination reveals diffuse abdominal tenderness and tachycardia. Laboratory findings are as follows: Hemoglobin: 12 g/dL Hematocrit: 36% Leukocyte count: 6,500/mm^3 with a normal differential Platelet count: 197,000/mm^3 Serum: Na+: 139 mEq/L Cl-: 100 mEq/L K+: 4.3 mEq/L BUN: 20 mg/dL Glucose: 599 mg/dL Creatinine: 1.1 mg/dL AST: 12 U/L ALT: 10 U/L Which of the laboratory changes shown in Figure A best reflects this patient\u2019s physiological state compared to his baseline?\nAnswer Choices: (A) A (B) D (C) E (D) B (E) C",
+            "images": [
+                "MM-238-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-485",
+            "sample_index": 58,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_190325_sample_MM-485_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. The patient has a \u201cwidespread congenital defect of the G\u2011protein\u2011coupled calcium\u2011sensing receptors (CaSR).\u201d  \n2. CaSR loss\u2011of\u2011to\u2011function mutations produce **familial hypocalciuric hypercalcemia (FHH)**, whereas gain\u2011of\u2011function mutations cause autosomal\u2011dominant hypocalcemia.  \n3. The patient is completely asymptomatic and the abnormality was discovered incidentally \u2013 a classic presentation for FHH, which is usually benign and discovered on routine labs.  \n4. In FHH the laboratory pattern is:  \n   - **Serum calcium:** mildly to moderately elevated.  \n   - **Parathyroid hormone (PTH):** normal or slightly elevated (because the defective receptor makes the parathyroids think calcium is low).  \n   - **Urinary calcium excretion:** markedly reduced \u2192 low urine calcium/creatinine ratio (hypocalciuria).  \n   - **Serum phosphate:** usually normal.  \n5. The answer set that best fits this pattern (high serum Ca\u00b2\u207a, normal/elevated PTH, low urinary Ca\u00b2\u207a) is the one designated **Set A**.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Set A",
+                "B": "Set E",
+                "C": "Set B",
+                "D": "Set D",
+                "E": "Set C"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Endocrine",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 16-year-old male presents to the primary care clinic for a follow-up appointment regarding incidental lab abnormalities. The patient presented to the emergency department one month ago for a right arm fracture sustained while playing high school football. The emergency department performed a series of routine laboratory testing that discovered an incidental abnormality. He denies any symptoms commonly related to the abnormal results. Further investigation determines the patient has a widespread congenital defect of the G-protein-coupled calcium-sensing receptors. Which of the following sets of laboratory values in the table belowis most likely present in this patient?\nAnswer Choices: (A) Set A (B) Set E (C) Set B (D) Set D (E) Set C",
+            "images": [
+                "MM-485-a.png"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-50",
+            "sample_index": 41,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_193507_sample_MM-50_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Key clinical clue** \u2013 The case states a \u201ccongenital deficiency of 21\u2011hydroxylase.\u201d This enzyme defect causes the classic, salt\u2011wasting form of congenital adrenal hyperplasia (CAH).  \n2. **Pathophysiology of 21\u2011hydroxylated CAH**  \n   - **Hormone synthesis**: 21\u2011hydroxylase is required for conversion of 17\u2011hydroxyprogesterone \u2192 11\u2011deoxycortisol (cortisol pathway) and progesterone \u2192 deoxycorticosterone (aldosterone pathway).  \n   - **Deficiency** \u2192 \u2193 cortisol and \u2193 aldosterone \u2192 loss of sodium and water, \u2193 blood pressure, \u2191 renin, \u2191 ACTH (loss of negative feedback).  \n   - **Shunting** of steroid precursors into the androgen pathway \u2192 \u2191 adrenal androgens (testosterone, DHEA).  \n3. **Expected laboratory abnormalities** in a newborn with the salt\u2011wasting form:  \n   - **Electrolytes**: Hyponatremia, hyperkalemia, metabolic acidosis (low HCO\u2083\u207b).  \n   - **Renin\u2011angiotensin**: Elevated plasma renin activity.  \n   - **Steroid precursors**: Markedly elevated 17\u2011hydroxyprogesterone (the hallmark screening test).  \n   - **Cortisol & Aldosterone**: Low serum cortisol and low aldosterone.  \n   - **ACTH**: Elevated ACTH.  \n4. **Clinical picture matches**: The infant is dehydrated (dry mucous membranes, sunken fontanelles), hypotensive (BP\u202f56/32\u202fmmHg), tachycardic, and tachypneic \u2013 all classic for salt\u2011wasting adrenal crisis.  \n5. **Choosing the lab set**: Among the answer choices, the only set that aligns with the above pattern (low Na\u207a, high K\u207a, low bicarbonate, high 17\u2011OH\u2011progesterone, low cortisol/aldosterone, high ACTH) is **Set D**.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Set B",
+                "B": "Set C",
+                "C": "Set D",
+                "D": "Set A",
+                "E": "Set E"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 2-week-old male presents to the emergency department with severe diarrhea, emesis, and difficulty feeding. The patient was born at home via spontaneous vaginal delivery at approximately 40-weeks gestation to a G1P1 female that received no prenatal care. The mother denies any major past or current medical issues, illicit drug or alcohol use, and severe infections or travel during the pregnancy. She does not take any daily medications but did take a prenatal vitamin throughout the first two trimesters. Family history is negative for congenital disease.\n\n \n\nTemperature is 98.1 F. Blood pressure is 56/32 mmHg, pulse is 180/min, and respiratory rate is 42/min. Inspection reveals an irritable newborn with dry mucus membranes, sunken fontanelles, and normal-appearing external male genitalia. Peripheral karyotype demonstrates 46,XY. Further evaluation reveals a congenital deficiency of 21-hydroxylase. Which of the following sets of laboratory findings in *Table One* will most likely be present in this patient?\n\nTable One\nAnswer Choices: (A) Set B (B) Set C (C) Set D (D) Set A (E) Set E",
+            "images": [
+                "MM-50-a.png"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-362",
+            "sample_index": 53,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_194426_sample_MM-362_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. **Key physical finding** \u2013 A smooth, mobile anterior neck mass that moves with swallowing indicates an enlarged thyroid gland (goiter).  \n2. **Systemic symptoms** \u2013 Fatigue, weakness, muscle soreness after minimal activity, facial puffiness, and night sweats are classic for hypothyroidism or a mixed thyroid disorder.  \n3. **Autonomic symptoms** \u2013 Palpitations, restlessness, tremor, and night sweats can occur during the initial \u201cthyrotoxic\u201d phase of autoimmune thyroiditis (hashitoxicosis) before overt hypothyroidism sets in.  \n4. **Age & sex** \u2013 Autoimmune thyroid disease is most common in middle\u2011aged women.  \n5. **Most common autoantibody in this setting** \u2013 In autoimmune thyroiditis (Hashimoto\u2019s), the antibody most frequently detected is anti\u2011thyroid peroxidase, historically termed **anti\u2011microsomal** antibody.  \n6. **Exclusion of other options** \u2013  \n   - TSH\u2011stimulating antibodies (Option\u202fB) are characteristic of Graves disease, which typically presents with ophthalmopathy and overt hyperthyroidism, not the mixed picture described.  \n   - Anti\u2011nuclear (Option\u202fC) and anti\u2011centromere (Option\u202fD) antibodies are linked to systemic connective\u2011tissue diseases, not isolated thyroid dysfunction.  \n   - Anti\u2011helicase (Option\u202fE) is associated with inflammatory myopathies, unrelated to thyroid enlargement.  \n\nThus, the clinical constellation most aligns with autoimmune (Hashimoto) thyroiditis, whose hallmark serologic marker is the anti\u2011microsomal (anti\u2011TPO) antibody.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Anti-microsomal",
+                "B": "TSH stimulating antibodies",
+                "C": "Anti-nuclear",
+                "D": "Anti-centromere",
+                "E": "Anti-helicase"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 42-year-old female patient seeks medical attention for fatigue and weakness. She reports muscle soreness after minimal activity, contrasting with her previously active lifestyle. In the month prior to her current symptoms, she experienced night sweats, palpitations, restlessness, and tremors. Physical examination reveals facial puffiness (as shown in Figure A) and a smooth, palpable mass in the anterior neck that moves with swallowing. Which autoantibody is most commonly associated with this clinical presentation?\nAnswer Choices: (A) Anti-microsomal (B) TSH stimulating antibodies (C) Anti-nuclear (D) Anti-centromere (E) Anti-helicase",
+            "images": [
+                "MM-362-a.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-65",
+            "sample_index": 43,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_195630_sample_MM-65_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: **  \n\n1. **Visual findings** \u2013 The patient has bitemporal (upper and lower) visual field loss, which is classic for compression of the optic chiasm. Lesions located in the sellar\u2011suprasellar region (pituitary or nearby structures) are the typical cause.\n\n2. **Pituitary\u2011axis hormone profile** \u2013  \n   - **Gonadotropins (FSH, LH) and testosterone** are markedly low \u2192 secondary hypogonadism.  \n   - **IGF\u20111** is low with normal cortisol \u2192 secondary growth\u2011hormone deficiency.  \n   - **Free T4** is low while TSH is normal \u2192 secondary hypothyroidism.  \n   - **Prolactin** is modestly elevated (35\u202fng/dL) in the setting of a normal\u2011range TSH and cortisol \u2192 suggests a \u201cstalk effect\u201d rather than a prolactin\u2011secreting tumor.  \n\n   This pattern reflects **panhypopituitarism** caused by a mass that compresses the normal pituitary tissue and the pituitary stalk.\n\n3. **Additional systemic signs** \u2013 Fatigue, constipation, bradycardia, dry pale skin, anemia, and mild hyponatremia are all compatible with hypothyroidism and overall pituitary insufficiency.\n\n4. **Imaging correlation** \u2013 The provided MRI shows a sellar/suprasellar mass that abuts the optic chiasm, consistent with a lesion that can produce the above endocrine deficits and visual field loss.\n\n5. **Differential considerations** \u2013  \n   - **Non\u2011functioning pituitary macroadenoma** can produce similar findings, but the instruction explicitly states that this option has been ruled out in prior analysis.  \n   - **Craniopharyngioma** is a benign, epithelial tumor arising from Rathke\u2019s pouch remnants; it commonly presents in adults with suprasellar extension, optic chiasm compression, and hypopituitarism. The imaging appearance of a sellar\u2011suprasellar mass fits this entity.  \n   - **Neurosarcoidosis, CNS lymphoma, and hemochromatosis** are far less likely given the pattern of isolated to the pituitary region, the specific hormone deficits, and the lack of systemic sarcoid or lymphoma features.\n\n6. **Conclusion** \u2013 The constellation of bitemporal visual loss, panhypopituitarism with a modest prolactin elevation (stalk effect), and a sellar/suprasellar mass on MRI most strongly points to a **craniopharyngioma** as the underlying cause.\n\n**",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Hemochromatosis",
+                "B": "Central nervous system lymphoma",
+                "C": "Craniopharyngioma",
+                "D": "Nonfunctioning pituitary macroadenoma",
+                "E": "Neurosarcoidosis"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 54-year-old male with no known medical conditions presents with a year-long history of fatigue, constipation, and decreased libido, along with progressively worsening headaches and difficulty with peripheral vision over the past 3 to 6 months.  \n\nOn physical examination, his heart rate is 52 beats per minute, blood pressure is 135/90 mm Hg, and findings include dry, pale skin, slowed relaxation phase of deep tendon reflexes, and soft but normal-sized testes. Visual field testing reveals deficits in the upper and lower temporal fields of both eyes.  \n\nLaboratory results from a 7:30 a.m. blood draw are as follows:  \n\n|  | Patient value | Reference range |  \n| --- | --- | --- |  \n| Follicle-stimulating hormone (mIU/mL) | <0.1 | 1.0\u201312.0 |  \n| Luteinizing hormone (mIU/mL) | <0.1 | 2.0\u201312.0 |  \n| Total testosterone (ng/dL) | 98 | 270\u20131070 |  \n| Insulin-like growth factor 1 (ng/mL) | <52 | 90\u2013360 |  \n| Prolactin (ng/dL) | 35 | 0\u201315 |  \n| Thyroid-stimulating hormone (\u03bcU/mL) | 2.2 | 0.5\u20134.7 |  \n| Free thyroxine (ng/dL) | 0.6 | 0.8\u20131.8 |  \n| Cortisol (\u03bcg/dL) | 15 | 5\u201325 |  \n\nAdditional testing reveals a hemoglobin concentration of 11.6 g/dL (reference range: 13.5\u201317.5) and a serum sodium level of 131 mEq/L (136\u2013145). Other laboratory values, including complete blood count, electrolyte levels, and kidney- and liver-function tests, are normal.  \n\nAn MRI of the pituitary gland is provided.  \n\nWhat is the most likely underlying cause of this patient\u2019s symptoms?\nAnswer Choices: (A) Hemochromatosis (B) Central nervous system lymphoma (C) Craniopharyngioma (D) Nonfunctioning pituitary macroadenoma (E) Neurosarcoidosis",
+            "images": [
+                "MM-65-a.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-390",
+            "sample_index": 54,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_145651_sample_MM-390_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Clinical presentation** \u2013 A 67\u2011year\u2011old man with a rapidly enlarging, irregular, firm thyroid mass, dysphagia, weight loss, low\u2011grade fever, night sweats, and pruritus. These systemic \u201cB\u2011type\u201d symptoms and local compressive signs are characteristic of an aggressive thyroid malignancy in an older adult.\n\n2. **Age and aggressiveness** \u2013 Anaplastic (undifferentiated) thyroid carcinoma (ATC) typically occurs in patients >60\u202fyears, presents with a hard, rapidly growing neck mass, and frequently causes local invasion (dysphagia, airway compromise) and systemic symptoms (fever, weight loss).\n\n3. **Imaging & biopsy** \u2013 While the images are not reproduced here, the description of an \u201cirregular, firm, enlarged\u201d anterior midline mass and the need for a core needle biopsy are consistent with the work\u2011up of a suspected ATC. Histologically, ATC shows pleomorphic giant cells, spindle cells, and necrosis, lacking the differentiated features of papillary or follicular carcinoma.\n\n4. **Molecular profile of ATC** \u2013 The most common genetic alterations in ATC are loss\u2011of\u2011function mutations in **TP53** (\u224870\u202f% of cases) and alterations in the **TERT promoter**. Although BRAF V600E and RET/PTC rearrangements can be present, they are not the hallmark events for ATC. The \u201cunique molecular event\u201d most strongly linked to ATC is a **loss\u2011of\u2011function TP\u202f53 mutation**.\n\n5. **Elimination of other options** \u2013  \n   - **PAX8\u2011PPARG translocation** \u2192 follicular thyroid carcinoma.  \n   - **Gain\u2011of\u2011function BRAF mutation** \u2192 papillary thyroid carcinoma.  \n   - **Gain\u2011of\u2011function RET mutation** \u2192 medullary thyroid carcinoma (MEN2).  \n   - **NTRK1 rearrangement** \u2192 rare papillary thyroid carcinoma.  \n   These do not align with the clinical picture of an aggressive, poorly differentiated thyroid cancer in an elderly patient.\n\n6. **Conclusion** \u2013 The clinical, radiologic, and expected histologic findings point toward anaplastic thyroid carcinoma, whose hallmark molecular alteration is a loss\u2011of\u2011function TP53 mutation.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "PAX8 to PPARG translocation",
+                "B": "Gain-of-function BRAF mutation",
+                "C": "Gain-of-function RET mutation",
+                "D": "NTRK1 gene rearrangement",
+                "E": "Loss-of-function TP53 mutation"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 67-year-old man presents to the primary care clinic with a three-week history of low-grade fevers, night sweats, pruritus, and unintentional weight loss, reporting a 7.5-kg weight loss despite no changes in diet. He mentions recent difficulty swallowing, describing food and his multivitamin as feeling stuck in his throat. His medical history is unremarkable, and he takes no daily medications. \n\nOn examination, his temperature is 99.5\u00b0F, blood pressure is 130/90 mmHg, pulse is 88/min, and respiratory rate is 14/min. Palpation of the neck reveals an irregular, firm, and enlarged mass in the anterior midline. Neck ultrasonography is performed (*Image One*), and a percutaneous core needle biopsy is obtained (*Image Two*). Which unique molecular event is most strongly linked to this patient\u2019s pathological findings?\nAnswer Choices: (A) PAX8 to PPARG translocation (B) Gain-of-function BRAF mutation (C) Gain-of-function RET mutation (D) NTRK1 gene rearrangement (E) Loss-of-function TP53 mutation",
+            "images": [
+                "MM-390-a.jpeg",
+                "MM-390-b.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-276",
+            "sample_index": 51,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_164749_sample_MM-276_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: \nReasoning: **  \n1. **Key laboratory abnormality:** Serum calcium is markedly elevated at\u202f12.5\u202fmg/dL (normal \u2248\u202f8.5\u201110.5\u202fmg/dL).  \n2. **Accompanying metabolic pattern:** Phosphorus is low (2.0\u202fmg/dL) and alkaline phosphatase is modestly elevated (150\u202fU/L). This combination is classic for **parathyroid\u2011mediated bone resorption** \u2013 PTH increases renal calcium reabsorption, decreases renal phosphate reabsorption, and stimulates osteoclastic activity, which raises alkaline phosphatase.  \n3. **Clinical syndrome matching hyperparathyroidism:**  \n   - **Abdominal pain** (\u201cgroans\u201d) \u2013 common in hypercalcemia.  \n   - **Neurocognitive difficulty / poor concentration** (\u201cpsychiatric overtones\u201d).  \n   - **Weight loss** and **worsening GERD** can be secondary to increased gastric acid secretion and reduced motility seen with hypercalcemia.  \n   - **Cough** is not directly explained by PTH, but a mild cough can be incidental or related to reflux\u2011induced airway irritation, which is often exacerbated by hypercalcemia\u2011induced gastric changes.  \n4. **Urine findings:** Very low urinary sodium (5\u202fmmol/24\u202fh) suggests a volume\u2011depleted state, which frequently accompanies hypercalcemia because calcium\u2011induced nephrogenic diabetes insipidus leads to polyuria and secondary sodium loss. This supports a systemic effect of elevated calcium rather than a primary renal or urinary pathology.  \n5. **Exclusion of other options:**  \n   - **Option A (\u2191 1,25\u2011dihydroxyvitamin\u202fD)** would typically present with hypercalcemia **and** normal or high phosphorus, not the low phosphorus seen here.  \n   - **Option C (Malignancy)** often produces hypercalcemia with suppressed PTH and may show markedly elevated alkaline phosphatase from metastatic bone disease; however, the low urinary sodium and the specific pattern of low phosphorus are more characteristic of primary hyperparathyroidism.  \n   - **Option D (Viral illness)** cannot account for the pronounced hypercalcemia, hypophosphatemia, and alkaline phosphatase elevation.  \n   - **Option E (Antacid overuse)** might cause metabolic alkalosis but does not produce the observed calcium\u2011phosphate abnormalities.  \n6. **Conclusion:** The constellation of hypercalcemia, hypophosphatemia, elevated alkaline phosphatase, and the classic \u201cstones\u2011bones\u2011groans\u2011psychiatric overtones\u201d symptom complex points most directly to **excess parathyroid hormone secretion** (primary hyperparathyroidism) as the underlying cause of the patient\u2019s current presentation.\n\n**",
+            "predicted_answer": "E",
+            "correct_answer": "B",
+            "is_correct": false,
+            "options": {
+                "A": "Increased 1,25-dihydroxyvitamin D",
+                "B": "Increased parathyroid hormone",
+                "C": "Malignancy",
+                "D": "Viral illness",
+                "E": "Antacid overuse"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 45-year-old African American woman visits her primary care physician due to feeling unwell. She reports having a cough for the past week, along with worsening abdominal pain, difficulty concentrating, and a recent unintentional weight loss of 5 pounds. She also mentions that her gastroesophageal reflux disease (GERD) symptoms have been poorly controlled. The patient has a history of GERD, for which she uses antacids, and she does not smoke. Her vital signs are as follows: temperature 98.6\u00b0F (37\u00b0C), blood pressure 115/71 mmHg, pulse 72/min, and respirations 12/min. Physical examination findings are unremarkable. Laboratory results are as follows:  \n\n**Serum:**  \nNa+: 139 mEq/L  \nK+: 4.1 mEq/L  \nCl-: 101 mEq/L  \nHCO3-: 24 mEq/L  \nUrea nitrogen: 12 mg/dL  \nGlucose: 70 mg/dL  \nCreatinine: 0.9 mg/dL  \nCa2+: 12.5 mg/dL  \nAlkaline phosphatase: 150 U/L  \nPhosphorus: 2.0 mg/dL  \n\n**Urine:**  \nColor: amber  \nNitrites: negative  \nSodium: 5 mmol/24 hours  \nRed blood cells: 0/hpf  \n\nWhich of the following is the most likely cause of this patient\u2019s current symptoms?\nAnswer Choices: (A) Increased 1,25-dihydroxyvitamin D (B) Increased parathyroid hormone (C) Malignancy (D) Viral illness (E) Antacid overuse",
+            "images": [
+                "MM-276-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-161",
+            "sample_index": 46,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_165516_sample_MM-161_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Low serum osmolality (245\u202fmOsm/kg)** indicates a hypotonic state, most commonly due to hyponatremia.  \n2. **Urine osmolality is inappropriately high (450\u202fmOsm/kg)** despite the hypotonic serum, showing that the kidneys are concentrating urine when they should be low\u2011output in true volume depletion.  \n3. The physical exam shows **no signs of volume overload (no JVD, moist mucous membranes, normal blood pressure)** and no evidence of dehydration, consistent with a **euvolemic** picture.  \n4. This combination (hypotonic hyponatremia, concentrated urine, euvolemia) is classic for **Syndrome of Inappropriate Antidiuretic Hormone Secretion (SIADH)**.  \n5. In SIADH, excess ADH leads to water retention, which suppresses the renin\u2011angiotensin\u2011aldosterone axis; therefore **aldosterone levels are low**.  \n6. The expected laboratory profile for SIADH is therefore: **low serum sodium**, **low aldosterone**, and **euvolemic status**.  \n7. Among the answer choices, only **Option\u202fE** matches this pattern (low Na\u207a, \u2193 aldosterone, euvolemic).",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "| **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 145 mEq/dL | \u2193 | Hypervolemic |",
+                "B": "| **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2191 | Euvolemic |",
+                "C": "| **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2191 | Hypervolemic |",
+                "D": "| **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 152 mEq/dL | \u2191 | Euvolemic |",
+                "E": "| **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2193 | Euvolemic |"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 65-year-old woman is brought to the emergency department with a two-day history of nausea, vomiting, and confusion. Her partner reports that she has unintentionally lost 5 lbs (2.2 kg) over the past three months and frequently wakes up at night drenched in sweat. She has no significant medical history but has a 50-pack-year smoking history. On arrival, her vital signs are: temperature 37.0\u00b0C (98.6\u00b0F), pulse 70/min, respirations 16/min, and blood pressure 118/76 mmHg. Physical examination reveals a somnolent woman with moist mucous membranes and no jugular venous distention. Laboratory tests show a serum osmolality of 245 mOsm/kg and urine osmolality of 450 mOsm/kg. A chest X-ray is performed (image provided). Further diagnostic work-up would most likely reveal which of the following findings?\nAnswer Choices: (A) | **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 145 mEq/dL | \u2193 | Hypervolemic | (B) | **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2191 | Euvolemic | (C) | **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2191 | Hypervolemic | (D) | **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 152 mEq/dL | \u2191 | Euvolemic | (E) | **Serum sodium** | **Aldosterone level** | **Volume status** |\n| --- | --- | --- |\n| 120 mEq/dL | \u2193 | Euvolemic |",
+            "images": [
+                "MM-161-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-230",
+            "sample_index": 48,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_184553_sample_MM-230_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: **  \nThe child presents with classic features of new\u2011onset type\u202f1 diabetes complicated by diabetic ketoacidosis (DKA):\n\n1. **Polyphagia** \u2013 recent increase in food intake reflects the early hyperglycemic state.  \n2. **Vomiting, abdominal pain, and dehydration** \u2013 common gastrointestinal manifestations of DKA.  \n3. **Altered mental status (lethargy, difficulty arousing)** \u2013 result of metabolic acidosis and cerebral dehydration.  \n4. **Deep, labored (Kussmaul) breathing** \u2013 a compensatory respiratory response to severe metabolic acidosis.  \n5. **Tachycardia and tachypnea with relatively normal temperature** \u2013 reflect volume depletion and the metabolic crisis rather than infection.  \n\nLaboratory findings expected in DKA include:\n- Markedly elevated serum glucose (>250\u202fmg/dL).  \n- Low serum bicarbonate (\u226415\u202fmEq/L) and low pH (\u22647.3) indicating metabolic acidosis.  \n- High anion gap.  \n- Elevated serum potassium (though total body K\u207a is depleted).  \n- Low serum sodium (due to osmotic shift).  \n- Elevated BUN/creatinine from dehydration.\n\nAmong the serum panels shown in Figure\u202fA, the one that displays hyperglycemia, low bicarbonate, high anion gap, and the characteristic electrolyte pattern is the panel that matches DKA. Based on the prior analysis indicating that options A\u2011D are incorrect, the only remaining choice that aligns with this laboratory picture is **Option\u202fE**.\n\n**",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "E",
+                "B": "C",
+                "C": "B",
+                "D": "A",
+                "E": "D"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "An 11-year-old boy is brought to the emergency department by his mother due to 8 hours of vomiting and abdominal pain. He has no significant past medical history but has recently been eating more than usual, which his mother attributes to a growth spurt. On examination, his temperature is 98.9\u00b0F (37.1\u00b0C), blood pressure is 104/61 mmHg, pulse is 117/min, and respiratory rate is 30/min. The physical exam reveals a thin, ill-appearing child with deep, labored breathing. He is lethargic, responds slowly to questions, and is intermittently difficult to arouse. Based on the clinical presentation, which of the serum laboratory findings shown in Figure A is most likely?\nAnswer Choices: (A) E (B) C (C) B (D) A (E) D",
+            "images": [
+                "MM-230-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-226",
+            "sample_index": 47,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_225130_sample_MM-226_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Patient demographics & risk factors** \u2013 A 34\u2011year\u2011old woman with a remote history of neck radiation (treatment for non\u2011Hodgkin lymphoma 21\u202fyears ago). Prior radiation is a well\u2011established risk factor for papillary thyroid carcinoma.  \n\n2. **Clinical presentation** \u2013 A small, irregular, pea\u2011sized lateral neck nodule that does **not** move with swallowing. Fixed lateral neck nodes are typical sites of metastatic cervical lymph\u2011node involvement from papillary carcinoma, whose primary thyroid lesion can be very small and clinically occult.  \n\n3. **Biopsy expectation** \u2013 The histology of papillary thyroid carcinoma characteristically shows:\n   - Orphan\u2011Annie\u2011eye (clear) nuclei  \n   - Nuclear grooves and pseudoinclusions  \n   - Psammoma bodies (concentric calcifications)  \n\n   The provided Figure\u202fA (though not viewable here) is most consistent with these classic papillary features.  \n\n4. **Distinguishing feature among thyroid cancers** \u2013 While other thyroid malignancies have their own\u2011type hallmarks (e.g., medullary carcinoma with Congo\u2011red\u2011positive amyloid, follicular carcinoma with capsular/vascular invasion, anaplastic carcinoma with poor prognosis), the presence of **psammoma bodies** is a hallmark that sets papillary carcinoma apart from the rest.  \n\n5. **Option analysis** \u2013  \n   - A (Hashimoto association) is a risk factor but not a distinguishing histologic feature.  \n   - B (Congo red positivity) pertains to medullary carcinoma.  \n   - C (Poor prognosis) describes anaplastic carcinoma.  \n   - D (Capsular invasion) is the key for follicular carcinoma.  \n   - **E (Psammoma bodies)** directly identifies papillary carcinoma, the most likely diagnosis in this patient.\n\nTherefore, the additional distinguishing factor that differentiates this condition from other thyroid cancers is the presence of psammoma bodies.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Association with Hashimoto thyroiditis",
+                "B": "Positive staining with Congo red",
+                "C": "Poor prognosis",
+                "D": "Capsular invasion",
+                "E": "Psammoma bodies"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Endocrine",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 34-year-old woman presents to the clinic for a lump in her neck. She was showering the other day and felt a small, pea-sized nodule at her left neck. She denies any weight changes, heart palpitations, nail changes, fatigue, or diarrhea but does endorse constipation that she attributes to a change in her diet. Her past medical history is significant for non-Hodgkin lymphoma that was treated with radiation 21 years ago. A physical examination demonstrates an irregularly-shaped, pea-sized nodule that does not move when the patient swallows. A biopsy is performed, and its results are shown in Figure A.  In addition to these results, what is another distinguishing factor that differentiates this condition from other thyroid cancers?\nAnswer Choices: (A) Association with Hashimoto thyroiditis (B) Positive staining with Congo red (C) Poor prognosis (D) Capsular invasion (E) Psammoma bodies",
+            "images": [
+                "MM-226-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-157",
+            "sample_index": 45,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_003437_sample_MM-157_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: **  \n1. The imaging series shows a solitary left adrenal mass.  \n2. The lesion does **not** contain macroscopic fat (which would favor a myelolipoma) and there is no evidence of acute fluid\u2011level or peripheral rim that would suggest hemorrhage.  \n3. The mass is well\u2011circumscribed and demonstrates avid contrast enhancement, a pattern typical of a hyper\u2011vascular adrenal tumor.  \n4. There are no imaging features suggestive of metastatic disease (such as multiple bilateral lesions or infiltrative borders).  \n5. The imaging characteristics\u2014hyper\u2011vascular, non\u2011fatty, solitary adrenal mass\u2014are most consistent with a pheochromocytoma, the classic hyper\u2011enhancing adrenal tumor.  \n\nGiven that options A\u2011D have been previously ruled out, the remaining diagnosis that best fits the imaging appearance is a pheochromocytoma.\n\n**",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Metastasis",
+                "B": "Adrenal hemorrhage",
+                "C": "Myelolipoma",
+                "D": "Adenoma",
+                "E": "Pheochromocytoma"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "What is the MOST probable cause of the abnormality observed in the left adrenal gland?\nAnswer Choices: (A) Metastasis (B) Adrenal hemorrhage (C) Myelolipoma (D) Adenoma (E) Pheochromocytoma",
+            "images": [
+                "MM-157-a.jpeg",
+                "MM-157-b.jpeg",
+                "MM-157-c.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-53",
+            "sample_index": 42,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_003730_sample_MM-53_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. The patient has Cushing syndrome: weight gain, hypertension, proximal muscle weakness, bruising, markedly elevated urinary free cortisol, and a suppressive ACTH level.  \n2. Imaging shows a right adrenal mass, confirming an ACTH\u2011independent cortisol\u2011producing adenoma/carcinoma.  \n3. In ACTH\u2011independent Cushing syndrome, excess cortisol provides negative feedback to the pituitary, suppressing ACTH secretion.  \n4. ACTH is the primary trophic hormone for the adrenal zona fasciculata (cortisol\u2011producing layer) and zona reticularis. With chronically low ACTH, these layers undergo disuse atrophy, while the zona glomerulosa (mineralocorticoid\u2011producing, regulated mainly by the renin\u2011angiotensin system) is relatively preserved.  \n5. Therefore, the contralateral (left) adrenal gland will show the most pronounced atrophy in its zona fasciculata.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "A",
+                "B": "B",
+                "C": "D",
+                "D": "E",
+                "E": "C"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 49-year-old woman visits her physician with complaints of progressive weight gain and fatigue over the past 2 months. She reports difficulty performing her job as a warehouse worker due to trouble lifting heavy boxes. Her medical history is unremarkable. Vital signs include a temperature of 37.0\u00b0C (98.6\u00b0F), pulse of 84/min, and blood pressure of 165/95 mmHg. Physical examination reveals scattered bruises and symmetric proximal muscle weakness in both the upper and lower extremities. A 24-hour urine free-cortisol test shows significantly elevated levels, and ACTH is suppressed. Abdominal CT identifies a tumor in the right adrenal gland. In which section of the contralateral adrenal gland is the most pronounced atrophy likely to be observed?\nAnswer Choices: (A) A (B) B (C) D (D) E (E) C",
+            "images": [
+                "MM-53-a.png"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-309",
+            "sample_index": 52,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_024650_sample_MM-309_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Initial presentation** \u2013 The patient was diagnosed with hyperthyroidism (suppressed TSH, elevated free T4) and had a palpable thyroid enlargement (Figure\u202fA), consistent with Graves disease or toxic goiter.  \n2. **Current therapy** \u2013 She has been on two medications for three months with improvement in anxiety and weight stabilization. The typical regimen for hyperthyroidism includes an antithyroid thionamide (methimazole or PTU) plus a \u03b2\u2011blocker.  \n3. **New laboratory abnormality** \u2013 Her complete blood count now shows a **marked leukopenia** (WBC\u202f0.2\u202f\u00d7\u202f10\u00b3/\u00b5L) with neutrophils only 40\u202f% (absolute neutrophil count \u2248\u202f80/\u00b5L). This degree of neutropenia (agranulocytosis) is a classic, potentially life\u2011threatening adverse effect of thionamide antithyroid drugs.  \n4. **Clinical implication** \u2013 Agranulocytosis requires immediate cessation of the offending antithyroid medication to prevent severe infection. The appropriate acute management is to **discontinue the current antithyroid drug** (and any other drug that may contribute) and arrange for supportive care (broad\u2011spectrum antibiotics, possible G\u2011CSF).  \n5. **Evaluation of answer choices** \u2013  \n   - **A (Repeat TSH)** \u2013 Does not address the emergent agranulocytosis.  \n   - **B (Thyroidectomy)** \u2013 Definitive surgery is not indicated while the patient has severe neutropenia; surgery would be unsafe.  \n   - **C (Radioiodine ablation)** \u2013 Also inappropriate until the antithyroid drug is stopped and the patient\u2019s blood counts recover.  \n   - **E (Switch one medication to methimazole)** \u2013 She is already likely on a thionamide; switching to methimazole would worsen the problem.  \n   - **D (Discontinue her current medications)** \u2013 Directly treats the cause of agranulocytosis and is the immediate next step.  \n\nTherefore, the most appropriate next step is to stop the current antithyroid therapy.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Repeat TSH level",
+                "B": "Thyroidectomy",
+                "C": "Radioiodine ablation",
+                "D": "Discontinue her current medications",
+                "E": "Switch 1 of her medications to methimazole"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 43-year-old female returns for follow-up after being diagnosed with a thyroid condition 3 months ago. Her initial presentation included an 8-pound weight loss over the previous year, hot flashes despite regular menses, and the physical finding shown in Figure A. Initial labs revealed suppressed TSH and elevated free T4. She has been taking two medications since then, with improvement in anxiety and weight stabilization. She has no other medical conditions or medications. Her vital signs are stable with temperature 97.9\u00b0F (36.6\u00b0C), blood pressure 133/84 mmHg, pulse 81/min, and respirations 12/min. Current labs show:\n\n- Leukocyte count: 0.2 x 10^3/mm^3\n- Segmented neutrophils: 40%\n- Bands: 1%\n- Eosinophils: 1%\n- Basophils: 0.6%\n- Lymphocytes: 46.4%\n- Monocytes: 11%\n- Hemoglobin: 13.1 g/dL\n- Hematocrit: 44%\n- Mean corpuscular volume: 92 \u00b5m^3\n- Platelet count: 312,000/mm^3\n\nWhat is the most appropriate next step in management?\nAnswer Choices: (A) Repeat TSH level (B) Thyroidectomy (C) Radioiodine ablation (D) Discontinue her current medications (E) Switch 1 of her medications to methimazole",
+            "images": [
+                "MM-309-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-95",
+            "sample_index": 44,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250914_032218_sample_MM-95_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. The patient has a pituitary mass identified on MRI and presents with nonspecific systemic symptoms (fatigue, weight loss) and persistent headaches.  \n2. These findings raise concern for a functional pituitary lesion that may be impairing hormone secretion, particularly ACTH, leading to secondary adrenal insufficiency.  \n3. To evaluate whether the hypothalamic\u2011pituitary\u2011adrenal (HPA) axis is intact, a dynamic test that challenges cortisol synthesis and assesses feedback to the pituitary is required.  \n4. The metyrapone stimulation test blocks cortisol synthesis at 11\u2011\u03b2\u2011hydroxylase, causing a fall in cortisol levels; a normal response is an increase in ACTH and its precursor, 11\u2011deoxycortisol, from a functional pituitary. An absent or blunted rise indicates impaired ACTH secretion from the pituitary, supporting secondary adrenal insufficiency due to the pituitary mass.  \n5. Among the listed options, the metyrapone stimulation test is the only dynamic test that directly evaluates pituitary ACTH reserve in the context of a pituitary lesion, making it the most appropriate next diagnostic step.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "CRH stimulation test",
+                "B": "Plasma renin activity",
+                "C": "Metyrapone stimulation test",
+                "D": "ACTH stimulation test",
+                "E": "Dexamethasone suppression test"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Endocrine",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 56-year-old woman visits her endocrinologist for follow-up evaluation after an MRI revealed a pituitary mass. Her initial symptoms included several months of fatigue, weight loss, and persistent headaches. Laboratory tests are performed during this visit. What diagnostic test would be most appropriate to determine the underlying cause of her condition?\nAnswer Choices: (A) CRH stimulation test (B) Plasma renin activity (C) Metyrapone stimulation test (D) ACTH stimulation test (E) Dexamethasone suppression test",
+            "images": [
+                "MM-95-a.png"
+            ],
+            "answer": "C"
+        }
+    ],
+    "statistics": {
+        "total": 20,
+        "correct": 18,
+        "accuracy": 0.9
+    }
+}

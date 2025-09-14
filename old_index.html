@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular 医学诊断标注平台</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .model-selector {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .model-btn {
+            padding: 8px 16px;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .model-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .stat { text-align: center; }
+        .stat-number { font-size: 24px; font-weight: bold; color: #3498db; }
+        .stat-label { font-size: 12px; color: #666; }
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #3498db;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        
+        .case-panel, .rating-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .case-header {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .model-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        /* 新增：题目显示样式 */
+        .question-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .question-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* 新增：图片显示样式 */
+        .image-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .medical-image {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .medical-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* 图片模态框样式 */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .options {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .options li {
+            background: #f9f9f9;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 5px;
+            border: 2px solid #eee;
+            position: relative;
+        }
+        
+        .predicted-option {
+            border-color: #f39c12;
+            background: #fef9e7;
+        }
+        
+        .correct-option {
+            border-color: #27ae60;
+            background: #d5f4e6;
+        }
+        
+        .incorrect-prediction {
+            border-color: #e74c3c;
+            background: #fdf2f2;
+        }
+        
+        .badge {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .predicted-badge { background: #f39c12; }
+        .correct-badge { background: #27ae60; }
+        
+        .reasoning {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+            white-space: pre-wrap;
+            line-height: 1.4;
+        }
+        
+        .score-section {
+            margin-bottom: 25px;
+        }
+        
+        .score-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .score-buttons {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .score-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .score-btn:hover {
+            border-color: #3498db;
+        }
+        
+        .score-btn.selected {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .score-desc {
+            font-size: 12px;
+            color: #666;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 3px;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .navigation {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .error-message {
+            background: #fdf2f2;
+            color: #e74c3c;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .model-selector {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cardiovascular 医学诊断标注平台</h1>
+            <p>多模型结果质量评估</p>
+            
+            <div class="model-selector" id="model-selector">
+                <!-- 模型按钮动态生成 -->
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="completed">0</div>
+                    <div class="stat-label">已完成</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="current">1</div>
+                    <div class="stat-label">当前题号</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="total">0</div>
+                    <div class="stat-label">总题数</div>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="case-panel">
+                <div class="case-header">
+                    <h2 id="case-title">加载中...</h2>
+                    <div id="case-id" style="color: #666; font-size: 14px;"></div>
+                </div>
+
+                <div class="model-info" id="model-info">
+                    <div id="model-name" style="font-weight: bold; margin-bottom: 5px;">请选择模型</div>
+                    <div id="model-details" style="font-size: 14px; color: #666;"></div>
+                    <div id="correctness" style="margin-top: 10px; font-weight: bold;"></div>
+                </div>
+
+                <!-- 新增：题目显示区域 -->
+                <div class="question-section">
+                    <h3>题目</h3>
+                    <div class="question-text" id="question-text">
+                        加载中...
+                    </div>
+                </div>
+
+                <!-- 新增：图片显示区域 -->
+                <div class="image-section" id="image-section" style="display: none;">
+                    <h3>医学图像</h3>
+                    <img id="medical-image" class="medical-image" onclick="openImageModal(this.src)" />
+                    <div class="image-caption" id="image-caption"></div>
+                </div>
+
+                <div>
+                    <h3>选择选项</h3>
+                    <ul class="options" id="options-list">
+                        <!-- 选项动态生成 -->
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>模型推理过程</h3>
+                    <div class="reasoning" id="reasoning-content">
+                        加载中...
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prev-btn">上一题</button>
+                    <button class="btn btn-secondary" onclick="nextQuestion()" id="next-btn">下一题</button>
+                </div>
+            </div>
+
+            <div class="rating-panel">
+                <div class="score-section">
+                    <div class="score-title">真实性评分 (1-5分)</div>
+                    <div class="score-buttons">
+                        <button class="score-btn" onclick="selectScore('truthfulness', 1, this)">1</button>
+                        <button class="score-btn" onclick="selectScore('truthfulness', 2, this)">2</button>
+                        <button class="score-btn" onclick="selectScore('truthfulness', 3, this)">3</button>
+                        <button class="score-btn" onclick="selectScore('truthfulness', 4, this)">4</button>
+                        <button class="score-btn" onclick="selectScore('truthfulness', 5, this)">5</button>
+                    </div>
+                    <div class="score-desc" id="truth-desc">请选择真实性评分</div>
+                </div>
+
+                <div class="score-section">
+                    <div class="score-title">信息量评分 (1-5分)</div>
+                    <div class="score-buttons">
+                        <button class="score-btn" onclick="selectScore('informativeness', 1, this)">1</button>
+                        <button class="score-btn" onclick="selectScore('informativeness', 2, this)">2</button>
+                        <button class="score-btn" onclick="selectScore('informativeness', 3, this)">3</button>
+                        <button class="score-btn" onclick="selectScore('informativeness', 4, this)">4</button>
+                        <button class="score-btn" onclick="selectScore('informativeness', 5, this)">5</button>
+                    </div>
+                    <div class="score-desc" id="info-desc">请选择信息量评分</div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="submitAnnotation()">提交标注</button>
+                    <button class="btn btn-secondary" onclick="skipCase()">跳过</button>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn btn-success" onclick="exportResults()">导出结果</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 图片模态框 -->
+    <div id="image-modal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <div class="modal-content">
+            <img class="modal-image" id="modal-image" />
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let allData = {};
+        let currentQuestionIndex = 0;
+        let currentModel = null;
+        let annotations = {};
+        let questionIds = [];
+        
+        let currentScores = {
+            truthfulness: null,
+            informativeness: null
+        };
+
+        // 评分描述
+        const scoreDesc = {
+            truthfulness: {
+                1: "完全不真实：包含明显错误、误导性内容",
+                2: "主要不真实：整体偏离事实，仅少量真实片段", 
+                3: "部分真实：有真实内容，但包含争议信息",
+                4: "大体真实：主要信息属实，存在轻微不准确",
+                5: "完全真实：所有信息符合事实，可被验证"
+            },
+            informativeness: {
+                1: "毫无信息量：敷衍、无关、模板化回答",
+                2: "信息量不足：简略、空洞，缺乏细节",
+                3: "一般：基本完整，但内容较浅",
+                4: "有信息量：清晰，提供实质性细节",
+                5: "非常有信息量：具体、深入、有启发性"
+            }
+        };
+
+        // 初始化 - 加载数据
+        async function loadData() {
+            try {
+                const models = ['gpt_oss_120b', 'gpt_oss_120b_cot']; 
+                
+                for (const model of models) {
+                    try {
+                        const response = await fetch(`./data/MedMMV_MedXpert_${model}_Cardiovascular_results.json`);
+                        if (response.ok) {
+                            const data = await response.json();
+                            processModelData(model, data);
+                        }
+                    } catch (e) {
+                        console.log(`无法加载模型 ${model} 的数据`);
+                    }
+                }
+                
+                finishLoading();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                alert('数据加载失败，请检查data文件夹是否存在JSON文件');
+            }
+        }
+
+        function processModelData(modelName, data) {
+            const results = data.results || data;
+            if (Array.isArray(results)) {
+                results.forEach(item => {
+                    const questionId = item.id;
+                    if (!allData[questionId]) {
+                        allData[questionId] = { models: {} };
+                    }
+                    allData[questionId].models[modelName] = item;
+                });
+                console.log(`处理模型 ${modelName}:`, results.length, '个问题');
+            } else {
+                console.error(`模型 ${modelName} 的数据格式不正确:`, data);
+            }
+        }
+
+        function finishLoading() {
+            questionIds = Object.keys(allData);
+            console.log(`加载完成，找到 ${questionIds.length} 个问题`);
+            
+            if (questionIds.length === 0) {
+                console.error('allData 为空:', allData);
+                alert('未找到有效数据，请检查控制台日志');
+                return;
+            }
+
+            createModelSelector();
+            updateStats();
+            
+            const firstModel = Object.keys(allData[questionIds[0]].models)[0];
+            selectModel(firstModel);
+        }
+
+        function createModelSelector() {
+            const selector = document.getElementById('model-selector');
+            const models = Object.keys(allData[questionIds[0]].models);
+
+            models.forEach(model => {
+                const btn = document.createElement('button');
+                btn.className = 'model-btn';
+                btn.textContent = model;
+                btn.onclick = () => selectModel(model);
+                selector.appendChild(btn);
+            });
+        }
+
+        function selectModel(modelName) {
+            currentModel = modelName;
+            
+            document.querySelectorAll('.model-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === modelName);
+            });
+
+            loadCurrentQuestion();
+        }
+
+        function loadCurrentQuestion() {
+            if (!currentModel || questionIds.length === 0) {
+                console.error('loadCurrentQuestion: 缺少必要数据', {currentModel, questionIdsLength: questionIds.length});
+                return;
+            }
+
+            const questionId = questionIds[currentQuestionIndex];
+            console.log(`加载问题: ${questionId}, 模型: ${currentModel}`);
+            
+            const questionData = allData[questionId];
+            if (!questionData) {
+                console.error(`问题 ${questionId} 不存在`);
+                return;
+            }
+            
+            const modelData = questionData.models[currentModel];
+            if (!modelData) {
+                console.error(`问题 ${questionId} 没有模型 ${currentModel} 的数据`);
+                console.log(`可用模型:`, Object.keys(questionData.models));
+                
+                // 显示错误信息
+                document.getElementById('question-text').innerHTML = 
+                    `<div class="error-message">模型 ${currentModel} 在问题 ${questionId} 中无数据<br>可用模型: ${Object.keys(questionData.models).join(', ')}</div>`;
+                document.getElementById('image-section').style.display = 'none';
+                document.getElementById('options-list').innerHTML = '<li>无数据</li>';
+                document.getElementById('reasoning-content').textContent = '无数据';
+                return;
+            }
+
+            console.log(`模型 ${currentModel} 数据:`, modelData);
+
+            // 更新基本界面
+            document.getElementById('case-title').textContent = `问题 ${currentQuestionIndex + 1}`;
+            document.getElementById('case-id').textContent = `ID: ${questionId}`;
+            
+            document.getElementById('model-name').textContent = `模型: ${currentModel}`;
+            document.getElementById('model-details').textContent = 
+                `${modelData.medical_task || ''} | ${modelData.body_system || ''} | ${modelData.question_type || ''}`;
+            
+            const isCorrect = modelData.is_correct;
+            document.getElementById('correctness').innerHTML = 
+                `预测: ${modelData.predicted_answer || 'N/A'} | 正确: ${modelData.correct_answer || 'N/A'} | 
+                <span style="color: ${isCorrect ? '#27ae60' : '#e74c3c'}">${isCorrect ? '✓ 正确' : '✗ 错误'}</span>`;
+
+            // 显示题目
+            updateQuestion(modelData);
+            
+            // 显示图片
+            updateImage(modelData, questionId);
+            
+            updateOptions(modelData);
+            updateReasoning(modelData);
+            updateNavigation();
+            loadExistingAnnotation();
+        }
+
+        // 新增：更新题目显示
+        function updateQuestion(modelData) {
+            const questionText = modelData.question || modelData.text || '无题目信息';
+            document.getElementById('question-text').textContent = questionText;
+        }
+
+        // 新增：更新图片显示
+        function updateImage(modelData, questionId) {
+            const imageSection = document.getElementById('image-section');
+            const medicalImage = document.getElementById('medical-image');
+            const imageCaption = document.getElementById('image-caption');
+            
+            // 尝试不同的图片路径和格式
+            const possibleExtensions = ['jpeg', 'jpg', 'png'];
+            const possiblePaths = [
+                `./data/images/${questionId}.jpeg`,
+                `./data/images/${questionId}.jpg`,
+                `./data/images/${questionId}.png`,
+                `./data/images/${questionId}-a.jpeg`,
+                `./data/images/${questionId}-a.jpg`,
+                `./data/images/${questionId}-a.png`
+            ];
+            
+            // 尝试加载图片
+            tryLoadImage(possiblePaths, 0, (imagePath) => {
+                if (imagePath) {
+                    medicalImage.src = imagePath;
+                    medicalImage.onerror = () => {
+                        imageSection.style.display = 'none';
+                    };
+                    imageCaption.textContent = `图片: ${questionId}`;
+                    imageSection.style.display = 'block';
+                } else {
+                    imageSection.style.display = 'none';
+                }
+            });
+        }
+
+        // 新增：递归尝试加载图片
+        function tryLoadImage(paths, index, callback) {
+            if (index >= paths.length) {
+                callback(null);
+                return;
+            }
+            
+            const img = new Image();
+            img.onload = () => callback(paths[index]);
+            img.onerror = () => tryLoadImage(paths, index + 1, callback);
+            img.src = paths[index];
+        }
+
+        // 新增：打开图片模态框
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 新增：关闭图片模态框
+        function closeImageModal() {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateOptions(modelData) {
+            const list = document.getElementById('options-list');
+            list.innerHTML = '';
+
+            if (modelData.options) {
+                Object.entries(modelData.options).forEach(([key, value]) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${key}:</strong> ${value}`;
+                    
+                    if (key === modelData.predicted_answer) {
+                        li.classList.add('predicted-option');
+                        if (!modelData.is_correct) li.classList.add('incorrect-prediction');
+                        li.innerHTML += '<span class="badge predicted-badge">预测</span>';
+                    }
+                    
+                    if (key === modelData.correct_answer) {
+                        li.classList.add('correct-option');
+                        li.innerHTML += '<span class="badge correct-badge">正确</span>';
+                    }
+                    
+                    list.appendChild(li);
+                });
+            }
+        }
+
+        function updateReasoning(modelData) {
+            const content = modelData.final_diagnosis || modelData.reasoning || '无推理过程';
+            document.getElementById('reasoning-content').textContent = content;
+        }
+
+        function updateNavigation() {
+            document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+            document.getElementById('next-btn').disabled = currentQuestionIndex === questionIds.length - 1;
+        }
+
+        function selectScore(type, score, element) {
+            const buttons = element.parentElement.querySelectorAll('.score-btn');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            element.classList.add('selected');
+            
+            currentScores[type] = score;
+            
+            const descId = type === 'truthfulness' ? 'truth-desc' : 'info-desc';
+            document.getElementById(descId).textContent = scoreDesc[type][score];
+        }
+
+        function submitAnnotation() {
+            if (currentScores.truthfulness === null || currentScores.informativeness === null) {
+                alert('请完成所有评分');
+                return;
+            }
+
+            const key = `${questionIds[currentQuestionIndex]}_${currentModel}`;
+            annotations[key] = {
+                questionId: questionIds[currentQuestionIndex],
+                model: currentModel,
+                truthfulness: currentScores.truthfulness,
+                informativeness: currentScores.informativeness,
+                timestamp: new Date().toISOString()
+            };
+
+            localStorage.setItem('annotations', JSON.stringify(annotations));
+            updateStats();
+            
+            alert('标注已保存');
+            findNextUnannotated();
+        }
+
+        function skipCase() {
+            findNextUnannotated();
+        }
+
+        function findNextUnannotated() {
+            for (let i = currentQuestionIndex + 1; i < questionIds.length; i++) {
+                const key = `${questionIds[i]}_${currentModel}`;
+                if (!annotations[key]) {
+                    currentQuestionIndex = i;
+                    loadCurrentQuestion();
+                    updateStats();
+                    return;
+                }
+            }
+            
+            const models = Object.keys(allData[questionIds[0]].models);
+            for (const model of models) {
+                if (model !== currentModel) {
+                    for (let i = 0; i < questionIds.length; i++) {
+                        const key = `${questionIds[i]}_${model}`;
+                        if (!annotations[key]) {
+                            selectModel(model);
+                            currentQuestionIndex = i;
+                            loadCurrentQuestion();
+                            updateStats();
+                            return;
+                        }
+                    }
+                }
+            }
+            
+            alert('所有案例已标注完成！');
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadCurrentQuestion();
+                updateStats();
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questionIds.length - 1) {
+                currentQuestionIndex++;
+                loadCurrentQuestion();
+                updateStats();
+            }
+        }
+
+        function loadExistingAnnotation() {
+            const key = `${questionIds[currentQuestionIndex]}_${currentModel}`;
+            const annotation = annotations[key];
+
+            currentScores = { truthfulness: null, informativeness: null };
+            
+            document.querySelectorAll('.score-btn').forEach(btn => btn.classList.remove('selected'));
+            document.getElementById('truth-desc').textContent = '请选择真实性评分';
+            document.getElementById('info-desc').textContent = '请选择信息量评分';
+
+            if (annotation) {
+                if (annotation.truthfulness) {
+                    const btn = document.querySelectorAll('.score-section:first-child .score-btn')[annotation.truthfulness - 1];
+                    if (btn) selectScore('truthfulness', annotation.truthfulness, btn);
+                }
+                if (annotation.informativeness) {
+                    const btn = document.querySelectorAll('.score-section:last-child .score-btn')[annotation.informativeness - 1];
+                    if (btn) selectScore('informativeness', annotation.informativeness, btn);
+                }
+            }
+        }
+
+        function updateStats() {
+            const totalCases = questionIds.length * Object.keys(allData[questionIds[0]].models).length;
+            const completed = Object.keys(annotations).length;
+            
+            document.getElementById('completed').textContent = completed;
+            document.getElementById('current').textContent = currentQuestionIndex + 1;
+            document.getElementById('total').textContent = questionIds.length;
+            
+            const progress = totalCases > 0 ? (completed / totalCases) * 100 : 0;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+
+        function exportResults() {
+            if (Object.keys(annotations).length === 0) {
+                alert('暂无标注数据');
+                return;
+            }
+
+            const data = {
+                timestamp: new Date().toISOString(),
+                totalAnnotations: Object.keys(annotations).length,
+                annotations: annotations
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `annotations_${new Date().toISOString().slice(0, 10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('annotations');
+            if (saved) annotations = JSON.parse(saved);
+            
+            loadData();
+        });
+
+        // 快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.key >= '1' && e.key <= '5') {
+                const score = parseInt(e.key);
+                if (e.shiftKey) {
+                    const btn = document.querySelectorAll('.score-section:last-child .score-btn')[score - 1];
+                    if (btn) selectScore('informativeness', score, btn);
+                } else {
+                    const btn = document.querySelectorAll('.score-section:first-child .score-btn')[score - 1];
+                    if (btn) selectScore('truthfulness', score, btn);
+                }
+            } else if (e.key === 'ArrowLeft') {
+                previousQuestion();
+            } else if (e.key === 'ArrowRight') {
+                nextQuestion();
+            } else if (e.key === 'Enter' && e.ctrlKey) {
+                submitAnnotation();
+            } else if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>

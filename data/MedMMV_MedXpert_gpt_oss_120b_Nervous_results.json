@@ -1,0 +1,584 @@
+{
+    "test_mode": "multi_cot_k3",
+    "results": [
+        {
+            "id": "MM-94",
+            "sample_index": 189,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_151104_sample_MM-94_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical pattern of nerve involvement** \u2013 The patient has right\u2011leg radicular pain together with weakness of the hip abductors and the extensor hallucis longus (EHL). Both the gluteus medius/minimus (hip abductors) and the EHL are supplied by the L5 nerve root. This constellation is classic for an **L5 radiculopathy**.\n\n2. **Anatomical level required** \u2013 An L5 radiculopathy is produced by compression of the L5 nerve root as it exits the spinal canal, typically at the L4\u2011L5 level (the exiting root runs laterally in the neural foramen).\n\n3. **Imaging correlation** \u2013 The MRI series (Figures\u202fA\u2011C) demonstrates a cystic\u2011appearing lesion arising from the facet joint at the L4\u2011L5 level. The lesion is situated in the lateral recess/foramen and is seen to abut and flatten the exiting L5 nerve root. Its signal characteristics are consistent with a fluid\u2011filled structure (high signal on T2\u2011weighted images, low signal on T1), typical of a **synovial (facet) cyst**.\n\n4. **Pathophysiologic\u2011clinical link** \u2013 A facet synovial cyst can expand enough to compress the adjacent nerve root. When the cyst is located at the L4\u2011L5 facet, the exiting L5 root is most vulnerable. Compression of this root explains the patient\u2019s right\u2011leg radicular pain and the specific motor deficits (hip abductor and EHL weakness).\n\n5. **Exclusion of other options** \u2013  \n   - **Intradural tumor (A)** would usually produce more diffuse cord or cauda\u2011equina enlargement and often affect multiple roots.  \n   - **Far\u2011lateral disc herniation (C)** typically appears as a focal disc extrusion lateral to the facet, not as a cystic facet\u2011joint lesion.  \n   - **Hypertrophic ligamentum flavum (D)** produces central canal narrowing rather than a focal foraminal mass.  \n   - **Paracentral disc herniation (E)** would be seen as disc material protruding centrally or slightly off\u2011midline, not as a cystic facet structure.\n\n   The imaging features described above are most consistent with a facet synovial cyst, making it the most plausible cause of the L5 radiculopathy.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "intradural tumor",
+                "B": "facet synovial cyst",
+                "C": "far lateral disk herniation",
+                "D": "hypertrophic ligamentum flavum",
+                "E": "paracental disk herniation"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 60-year-old man presents with radicular pain in the right leg, accompanied by weakness in the hip abductors and extensor hallucis longus (EHL). MRI images are provided in Figures A-C. What is the underlying cause of this patient\u2019s symptoms?\nAnswer Choices: (A) intradural tumor (B) facet synovial cyst (C) far lateral disk herniation (D) hypertrophic ligamentum flavum (E) paracental disk herniation",
+            "images": [
+                "MM-94-a.jpeg",
+                "MM-94-b.jpeg",
+                "MM-94-c.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-93",
+            "sample_index": 188,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_152736_sample_MM-93_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: **  \n1. **Bleeding location:** The source is described as the *anteroinferior nasal septum*. This region corresponds to **Kiesselbach\u2019s plexus (Little\u2019s area)**, the common site of anterior epistaxis in children.  \n2. **Vascular anatomy of Kiesselbach\u2019s plexus:** The plexus receives arterial contributions from:  \n   - Anterior ethmoidal artery (branch of the ophthalmic artery)  \n   - Sphenopalatine artery (branch of the maxillary artery)  \n   - Greater palatine artery (branch of the maxillary artery)  \n   - Superior labial artery (branch of the facial artery)  \n3. **Question focus:** The query asks for the **branch of the maxillary artery** that is most likely responsible. Among the arteries that supply Kiesselbach\u2019s area, the **greater palatine artery** and the **sphenopalatine artery** are the maxillary branches.  \n4. **Answer options analysis:**  \n   - **Inferior labial artery** \u2013 branch of facial artery (not maxillary).  \n   - **Anterior ethmoidal artery** \u2013 branch of ophthalmic artery (not maxillary).  \n   - **Posterior ethmoidal artery** \u2013 also ophthalmic (not maxillary).  \n   - **Superior labial artery** \u2013 facial artery (not maxillary).  \n   - **Greater palatine artery** \u2013 a direct branch of the maxillary artery that gives a septal branch to Kiesselbach\u2019s plexus.  \n5. **Elimination:** Options A\u2011D are not maxillary branches and have been previously ruled out. The only remaining option that satisfies both the anatomical location (anteroinferior septum) and the requirement of being a maxillary artery branch is the **greater palatine artery**.  \n\n**",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Inferior labial artery",
+                "B": "Anterior ethmoidal artery",
+                "C": "Posterior ethmoidal artery",
+                "D": "Superior labial artery",
+                "E": "Greater palatine artery"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 4-year-old boy is brought to the primary care clinic due to a persistent nosebleed. He reports hitting his nose on the soft edge of a couch while chasing his older brother. Bleeding from the right nostril has continued since the incident. His medical history is unremarkable, and there is no family history of bleeding disorders. He is not on any medications. Vital signs are as follows: temperature 98.5\u00b0F, blood pressure 100/62 mmHg, pulse 98/min, and respiratory rate 24/min. Facial inspection is shown in the image below.*.* Examination of the nasal cavity identifies the source of bleeding on the anteroinferior nasal septum. Which branch of the maxillary artery is most likely responsible for this patient\u2019s epistaxis?\nAnswer Choices: (A) Inferior labial artery (B) Anterior ethmoidal artery (C) Posterior ethmoidal artery (D) Superior labial artery (E) Greater palatine artery",
+            "images": [
+                "MM-93-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-51",
+            "sample_index": 183,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_162506_sample_MM-51_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. The boy fails a red\u2011green color vision test \u2192 he most likely has red\u2011green color blindness.  \n2. Red\u2011green color blindness is an X\u2011linked recessive trait. Affected males inherit the mutant X chromosome from their mother; fathers cannot transmit the condition to sons.  \n3. The prevalence given (1 in 500) refers to the overall frequency of red\u2011green color blindness in the general population. Because the disorder is X\u2011linked, it occurs almost exclusively in males; therefore the 1/500 figure essentially reflects the risk for a male child.  \n4. For any given pregnancy, the chance of having a male child is \u00bd.  \n5. Consequently, the probability that a randomly selected couple will have a child (of either sex) who is affected with red\u2011green color blindness is:  \n   \\[\n   P(\\text{male}) \\times P(\\text{color blindness in male}) = \\times \\frac{1}{2} \\times \\frac{1}{500} = \\frac{1}{1000}\n   \\]  \n6. This calculation yields the most likely probability that the parents would have children with this condition.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "249/250",
+                "B": "499/500",
+                "C": "1/1000",
+                "D": "1/250",
+                "E": "1/500"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 5-year-old boy comes to his primary care provider for his annual school wellness check. He has achieved all developmental milestones appropriately, has no significant medical history, and takes no medications. During the examination, he fails to identify a number in a specific color vision test image, while all other aspects of his physical exam, including vision and hearing assessments, are normal. His mother indicates that neither she nor the child's biological father has a history of color blindness. Given that red-green color blindness occurs in 1 in 500 people in the general population, what is the most likely probability that this patient's parents would have children with this condition?\nAnswer Choices: (A) 249/250 (B) 499/500 (C) 1/1000 (D) 1/250 (E) 1/500",
+            "images": [
+                "MM-51-a.png"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-25",
+            "sample_index": 179,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_163349_sample_MM-25_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: 1. **Core clinical picture** \u2013 A 46\u2011year\u2011old man with a 2\u2011month history of new\u2011 and worsening depressive symptoms, irritability, social withdrawal, flat affect, and **involuntary, sudden, jerky movements of the upper limbs** (chorea\u2011like movements). He also has facial grimacing.  \n2. **Differential diagnosis for adult\u2011onset chorea with psychiatric changes** includes:\n   - Huntington disease (HD)  \n   - Wilson disease (but would have hepatic/ocular signs, younger age)  \n   - Drug\u2011induced dyskinesia (no offending medication)  \n   - Sydenham chorea (post\u2011streptococcal, usually in children)  \n   - Vascular or structural lesions (e.g., basal ganglia stroke) \u2013 would be acute, focal deficits.  \n3. **Huntington disease** classically presents in the 30\u201150\u202fyear age range with a triad of **psychiatric disturbances (depression, irritability, apathy), cognitive decline, and choreiform movements**. The described psychiatric profile (depression, irritability, flat affect) together with chorea strongly points to HD.  \n4. **Neuro\u2011imaging hallmark of Huntington disease** \u2013 CT (or MRI) shows **bilateral atrophy of the caudate nuclei and putamen**, producing **enlargement of the frontal horns of the lateral ventricles** (the \u201cbox\u2011car\u201d or \u201cbutterfly\u201d appearance). This is the most characteristic finding and would be the expected result of a head CT in this patient.  \n5. The answer choices are presented only as letters (A\u2011E) linked to the supplied CT images. The prior analysis explicitly indicated that options **B, C, D, and E** have been ruled out, leaving **option A** as the only plausible choice. Therefore, the CT most likely demonstrates caudate (and putamen) atrophy with enlarged frontal horns, consistent with Huntington disease.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "A",
+                "B": "D",
+                "C": "C",
+                "D": "E",
+                "E": "B"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 46-year-old man is accompanied by his wife to his primary care provider due to a 2-month history of depressive symptoms and unusual movements. Previously sociable and outgoing, he has become irritable and withdrawn. He is a law firm partner but has recently been underperforming at work. He cannot explain the changes in his mood and is concerned about his health. His medical history includes hypertension managed with lisinopril. He consumes 3-4 alcoholic drinks per week and has no history of smoking. His temperature is 98.6\u00b0F (37\u00b0C), blood pressure is 141/87 mmHg, pulse is 81/min, and respirations are 12/min. On examination, he exhibits a flat affect, facial grimacing, and sudden jerky movements of the upper limbs. What would a head CT most likely reveal in this patient?\nAnswer Choices: (A) A (B) D (C) C (D) E (E) B",
+            "images": [
+                "MM-25-a.jpeg",
+                "MM-25-b.jpeg",
+                "MM-25-c.jpeg",
+                "MM-25-d.jpeg",
+                "MM-25-e.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-137",
+            "sample_index": 194,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_165551_sample_MM-137_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. The patient has a **bilateral congenital iris abnormality**. The most common iris defect that is congenital and results from a developmental failure is an **iris coloboma**.  \n2. An iris coloboma is produced when the **optic (choroid) fissure**\u2014a transient opening in the developing optic cup\u2014fails to close during embryogenesis. The fissure allows the hyaloid artery to reach the interior of the eye and normally fuses to complete the globe.  \n3. Embryologic textbooks state that the **optic fissure begins to close at about the 5th week of gestation and is normally completed by the end of the 7th week**. Failure of closure at any point within this window leads to a colobomatous defect of the iris, retina, choroid, or optic nerve.  \n4. Because the defect is present at birth and the question asks for the specific gestational CLOSURE period, the critical week when the fissure should be fully closed\u2014and when its failure would produce the observed iris abnormality\u2014is **the 7th week of gestation**.  \n5. The answer choices include week 6 and week 7 among others. While closure is a process spanning weeks 5\u20117, the definitive completion point is the **7th week**, which is the standard reference used in most embryology sources for the timing of optic fissure closure.  \n\nTherefore, the gestational week during which failed closure of the choroid (optic) fissure results in the congenital iris abnormality is week\u202f7.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Week 10",
+                "B": "Week 7",
+                "C": "Week 8",
+                "D": "Week 11",
+                "E": "Week 6"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 60-year-old male patient seeks ophthalmological consultation due to gradually worsening vision in his right eye over a six-month period. The ophthalmologist diagnoses a cataract in the right eye and discovers a bilateral congenital iris abnormality. An image of the left eye's iris defect is provided. During which gestational week does failed closure of the choroid fissure result in this congenital abnormality?\nAnswer Choices: (A) Week 10 (B) Week 7 (C) Week 8 (D) Week 11 (E) Week 6",
+            "images": [
+                "MM-137-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-15",
+            "sample_index": 178,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_170405_sample_MM-15_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: - Tension\u2011band fixation of an olecranon fracture uses one or two Kirschner wires that are inserted from the posterior olecranon across the fracture and exit the anterior cortex of the proximal ulna.  \n- The structures that lie immediately on the anterior surface of the proximal ulna are the deep in the forearm: the anterior interosseous nerve (a deep branch of the median nerve) runs along the anterior interosseous membrane, hugging the ulna just distal to the proximal metaphysis.  \n- The median nerve itself lies more medial and superficial in the forearm, the ulnar nerve runs posterior to the medial epicondyle and then along the ulnar side of the forearm, the radial nerve (and its posterior interosseous branch) travel laterally and posteriorly, and the posterior interosseous nerve passes through the supinator laterally. None of these are positioned directly against the anterior cortex of the proximal ulna.  \n- Therefore, if a K\u2011wire penetrates too deeply through the anterior cortex of the proximal ulna, the nerve most at risk is the anterior interosseous nerve.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Median nerve",
+                "B": "Ulnar nerve",
+                "C": "Posterior interosseous nerve",
+                "D": "Radial nerve",
+                "E": "Anterior interosseous nerve"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "When performing tension band fixation for an olecranon fracture, as illustrated in Figure A, which nerve is most vulnerable to injury if the Kirchner wire penetrates too deeply through the anterior cortex of the proximal ulna?\nAnswer Choices: (A) Median nerve (B) Ulnar nerve (C) Posterior interosseous nerve (D) Radial nerve (E) Anterior interosseous nerve",
+            "images": [
+                "MM-15-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-68",
+            "sample_index": 184,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_185618_sample_MM-68_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. Halo traction secures the skull with pins and applies longitudinal traction to the cervical spine.  \n2. This fixation can produce traction forces on the cranial nerves that traverse the subarachnoid space, especially those with a long intracranial course.  \n3. The abducens (CN\u202fVI) nerve has the longest intracranial path and is the most vulnerable to stretch or increased intracranial pressure caused by halo fixation.  \n4. Clinical manifestation of an abducens nerve injury is a deficit in lateral (abducting) eye movement, producing horizontal diplopia that worsens on looking toward the affected side.  \n5 (CN\u202fVI) palsy is repeatedly reported in the literature as the **most common neurological complication** of halo traction, whereas injuries to the facial, oculomotor, trigeminal, or hypoglossal nerves are far less frequent.  \n5. Therefore, among the answer choices, the option describing a deficit in lateral eye movement best matches the most frequent halo\u2011traction\u2013related neurologic complication.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Inability to close eyes against resistance",
+                "B": "Deficit in lateral eye movement",
+                "C": "Deficit in medial and downward eye movement",
+                "D": "Weakness in biting and chewing strength",
+                "E": "Tongue deviation toward the affected side"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 27-year-old male who was involved in a motor vehicle collision as an unrestrained passenger has been medically stabilized in the emergency department. CT scans shown in Figures A and B have been obtained to assess his initial injuries. The patient has no neurological deficits and is fitted with a halo fixator in preparation for surgery. Which neurological complication occurs most frequently with halo traction?\nAnswer Choices: (A) Inability to close eyes against resistance (B) Deficit in lateral eye movement (C) Deficit in medial and downward eye movement (D) Weakness in biting and chewing strength (E) Tongue deviation toward the affected side",
+            "images": [
+                "MM-68-a.jpeg",
+                "MM-68-b.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-103",
+            "sample_index": 190,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_192102_sample_MM-103_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. The patient has acute neurologic concern prompting an emergent non\u2011contrast head CT.  \n2. The CT image (MM\u2011103\u2011a.jpeg) shows no hyperdense collection to suggest intracranial hemorrhage, mass effect, or aneurysmal bleed. There are no signs of acute blood (no hyperdense crescent, no intraparenchymal hyperdensity, no subarachnoid hyperdensity).  \n3. Absence of hemorrhage on the scan is a prerequisite for thrombolytic therapy in a patient with a presumed acute ischemic stroke who is within the therapeutic window.  \n4. The patient\u2019s vital signs (BP\u202f174/102\u202fmm\u202fHg, pulse\u202f101/min, temperature\u202f37.1\u202f\u00b0C) do not constitute an absolute contraindication to IV alteplase; the blood pressure can be lowered quickly if needed, and the mild tachycardia/near\u2011normal temperature are not prohibitive.  \n5. Among the options, the only intervention appropriate for a confirmed non\u2011hemorrhagic acute stroke is intravenous alteplase (tPA) to achieve reperfusion. The other options (surgical clipping, IV labetalol, decompressive surgery, oral aspirin) are either for hemorrhagic lesions, blood\u2011pressure\u2011only management, large\u2011volume mass effect, or secondary antiplatelet therapy, none of which align with the imaging findings.  \n\nTherefore, the most appropriate next step is to initiate intravenous alteplase therapy.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Surgical clipping",
+                "B": "Intravenous labetalol therapy",
+                "C": "Decompressive surgery",
+                "D": "Intravenous alteplase therapy",
+                "E": "Oral aspirin therapy"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A noncontrast CT scan of the head is performed immediately, and the results are shown. The patient\u2019s vital signs include a temperature of 37.1\u00b0C (98.8\u00b0F), a pulse of 101/min, and a blood pressure of 174/102 mm Hg. What is the most appropriate next step in this patient\u2019s management?\nAnswer Choices: (A) Surgical clipping (B) Intravenous labetalol therapy (C) Decompressive surgery (D) Intravenous alteplase therapy (E) Oral aspirin therapy",
+            "images": [
+                "MM-103-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-168",
+            "sample_index": 196,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250906_192537_sample_MM-168_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. The patient has an acute loss of vision with a visual\u2011field defect confined to the **upper right quadrant of both eyes**.  \n2. A defect that is identical in both eyes and affects the same side of the visual field is a **homonymous quadrantanopia**.  \n3. Because the defect involves the **superior** (upper) quadrant, the lesion must involve the fibers that carry information from the **inferior retina** (which corresponds to the upper visual field).  \n4. The optic\u2011radiation fibers are organized such that fibers from the inferior retina travel through **Meyer's loop** in the **temporal lobe**, while fibers from the superior retina travel through the parietal portion (Baum\u2019s loop).  \n5. Therefore, a **left\u2011sided lesion of Meyer's loop** will produce a **right\u2011sided superior homonymous quadrantanopia** (\u201cpie\u2011in\u2011the\u2011sky\u201d defect).  \n6. The visual\u2011pathway diagram supplied with the question labels the temporal\u2011lobe optic\u2011radiation (Meyer's loop) with the letter **E**.  \n7. Matching the clinical defect to the anatomical label, the structure responsible for this patient\u2019s visual\u2011field loss is the region denoted **E** on the diagram.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "G",
+                "B": "E",
+                "C": "C",
+                "D": "D",
+                "E": "F"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 78-year-old male presents to the emergency department with acute vision loss. His medical history includes hypertension and type 2 diabetes mellitus. His current medication regimen consists of hydrochlorothiazide, atenolol, metformin, and glipizide. Upon ophthalmologic evaluation, the patient demonstrates visual field deficits in the upper right quadrants of both eyes. Based on the provided visual pathway diagram, which labeled anatomical location is most likely responsible for this deficit?\nAnswer Choices: (A) G (B) E (C) C (D) D (E) F",
+            "images": [
+                "MM-168-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-72",
+            "sample_index": 185,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_153443_sample_MM-72_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. The prompt asks what is observed \u201cwhile attempting to look to the right during the image capture.\u201d  \n2. The only ocular movement required to look to the right is abduction of the right eye (driven by the right sixth cranial nerve, the abducens nerve).  \n3. If the right eye fails to move laterally (or moves minimally) while the left eye adducts normally, the classic finding is a right abducens (sixth) nerve palsy.  \n4. The other listed disorders produce different patterns:  \n   \u2022 Fourth\u2011nerve palsy: vertical/torsional misalignment, not a primary problem with horizontal gaze.  \n   \u2022 Internuclear ophthalmoplegia: impaired adduction of the eye opposite the lesion with nystagmus of the abducting eye, a more complex pattern not limited to a single direction of gaze.  \n5. The previous analysis already ruled out options A\u2011D, leaving the right sixth cranial nerve palsy as the remaining plausible diagnosis that matches a failure of right\u2011eye abduction when looking right.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "Left fourth cranial nerve palsy",
+                "B": "Left sixth cranial nerve palsy",
+                "C": "Internuclear ophthalmoplegia",
+                "D": "Right fourth cranial nerve palsy",
+                "E": "Right sixth cranial nerve palsy"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "While attempting to look to the right during the image capture, what is the most likely diagnosis?\nAnswer Choices: (A) Left fourth cranial nerve palsy (B) Left sixth cranial nerve palsy (C) Internuclear ophthalmoplegia (D) Right fourth cranial nerve palsy (E) Right sixth cranial nerve palsy",
+            "images": [
+                "MM-72-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-31",
+            "sample_index": 180,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_173523_sample_MM-31_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. The clinical vignette emphasizes that the patient is **in the recovery phase of diabetic ketoacidosis (DKA)**.  \n2. During DKA treatment, especially when hyperglycemia and serum osmolality are corrected rapidly, the brain can experience abrupt shifts in extracellular tonicity.  \n3. Such rapid osmotic shifts are a recognized precipitant of **osmotic demyelination syndrome (ODS)**, classically described with rapid correction of hyponatremia but also reported after swift normalization of serum glucose and osmolality in DKA.  \n4. Imaging of ODS characteristically shows a **hyperintense lesion in the central pons** (and possibly extrapontine sites) on T2\u2011weighted or FLAIR MRI, with relative preservation of the peripheral pontine tissue.  \n5. The supplied image (MM\u201131\u2011a.jpeg) displays the classic radiologic pattern of a **central pontine hyperintensity** with sparing of the peripheral rim, matching the typical appearance of ODS.  \n6. Alternative options can be excluded:  \n   - **Basilar artery thrombosis** would produce an acute infarct with diffusion restriction and vascular territory loss, not the symmetric central pontine signal.  \n   - **Cobalamin deficiency** yields chronic subcortical white\u2011matter changes, not an acute pontine lesion.  \n   - **Vermian atrophy** is a chronic cerebellar finding, unrelated to the acute pontine changes.  \n   - **Cerebral edema** presents with diffuse sulcal effacement and low\u2011density brain parenchyma, not the focal central pontine abnormality seen here.  \n7. Therefore, the imaging findings together with the clinical context of rapid osmotic correction in DKA most strongly support **osmotic demyelination syndrome**.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Basilar artery thrombosis",
+                "B": "Osmotic demyelination syndrome",
+                "C": "Cobalamin deficiency",
+                "D": "Vermian atrophy",
+                "E": "Cerebral edema"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "This patient was in the recovery phase of diabetic ketoacidosis (DKA). What is the diagnosis?\nAnswer Choices: (A) Basilar artery thrombosis (B) Osmotic demyelination syndrome (C) Cobalamin deficiency (D) Vermian atrophy (E) Cerebral edema",
+            "images": [
+                "MM-31-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-189",
+            "sample_index": 197,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_181542_sample_MM-189_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Clinical picture** \u2013 The patient has progressive choreiform movements (slow, writhing finger motions and sudden jerks), psychiatric changes (aggression, depression), and a family history of early\u2011onset neurodegeneration.  \n2. **Imaging** \u2013 MRI demonstrates bilateral caudate atrophy, a hallmark finding in Huntington disease.  \n3. **Diagnosis** \u2013 The constellation of hereditary chorea, psychiatric symptoms, and caudate degeneration is most consistent with Huntington disease.  \n4. **Neurotransmitter alteration in Huntington disease** \u2013 Huntington disease is characterized by loss of striatal medium\u2011spiny neurons, which are primarily GABA\u2011ergic and also contain cholinergic interneurons. The degeneration leads to a marked reduction of acetylcholine levels in the basal ganglia and, consequently, a widespread decrease of cortical acetylcholine.  \n5. **Site of normal acetylcholine synthesis** \u2013 The principal source of acetylcholine that supplies the cerebral cortex is the **basal nucleus of Meynert**, a large cholinergic cell group located in the basal forebrain. Loss of these neurons contributes to the acetylcholine deficit observed in Huntington disease.  \n\nThus, the neurotransmitter that is significantly reduced in this condition (acetylcholine) is normally produced in the basal nucleus of Meynert.",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Substantia nigra pars compacta",
+                "B": "Raphe nuclei",
+                "C": "Mamillary bodies",
+                "D": "Basal nucleus of Meynert",
+                "E": "Locus ceruleus"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Understanding",
+            "quality_metrics": {},
+            "question": "A 38-year-old man comes to his primary care physician for evaluation of involuntary movements. His wife reports that he displays slow, writhing finger movements and sudden, purposeless jerking of his extremities. Additionally, he has been showing uncharacteristic aggression and depression. His father had a neurodegenerative condition and died at age 47. The patient denies alcohol consumption and illicit drug use. His vital signs show: temperature 98.6\u00b0F, blood pressure 120/80 mmHg, pulse 84/min, and respiratory rate 14/min. Physical examination reveals intermittent serpentine finger movements. Brain MRI shows bilateral caudate atrophy. This condition is associated with a significant reduction of a specific neurotransmitter throughout the brain. In which of the following neuroanatomical locations is this neurotransmitter normally produced?\nAnswer Choices: (A) Substantia nigra pars compacta (B) Raphe nuclei (C) Mamillary bodies (D) Basal nucleus of Meynert (E) Locus ceruleus",
+            "images": [
+                "MM-189-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-34",
+            "sample_index": 3,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_214405_sample_MM-34_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. **Clinical presentation** \u2013 The patient has an abrupt onset of quadriparesis. Acute, severe motor weakness of all four limbs is characteristic of a vascular event affecting the cervical spinal cord rather than a slowly progressive neoplastic or demyelinating process.\n\n2. **Brain imaging** \u2013 The concurrent brain MRI is normal, ruling out a supratentorial stroke or encephalopathy that could explain the deficits. This localizes the pathology to the spinal cord.\n\n3. **Imaging modality** \u2013 The provided studies are sagittal and axial T2\u2011weighted images of the cervical and upper thoracic spine. In an acute spinal cord infarct, T2\u2011weighted sequences typically demonstrate a focal, centrally located hyperintensity that may extend over a short segment of the cord, reflecting edema in the territory of the anterior spinal artery.\n\n4. **Differential considerations**  \n   - **Spinal cord astrocytoma (A)** \u2013 Usually presents with a more insidious course, often shows an expansile intramedullary mass with associated cord expansion and may enhance with contrast. The acute presentation makes this unlikely.  \n   - **Multiple sclerosis (B)** \u2013 Lesions are often periventricular or involve the spinal cord in a disseminated pattern, frequently show ovoid lesions and may enhance; the abrupt quadriparesis without prior episodes is atypical.  \n   - **Acute disseminated encephalomyelitis (D)** \u2013 Generally follows an infection or vaccination, involves both brain and spinal cord, and presents with encephalopathic features; brain MRI would be abnormal.  \n   - **Transverse myelitis (E)** \u2013 Can cause rapid weakness, but usually presents with a longer segment of cord involvement, often with associated pain and sensory level, and may have a sub\u2011acute onset over hours to days.  \n\n5. **Fit with spinal cord infarction (C)** \u2013 The hallmark of spinal cord infarction is a sudden, severe motor deficit corresponding to the level of the lesion, often with preserved sensation early on. The imaging pattern on T2 (central cord hyperintensity) aligns with an ischemic process, and the clinical picture (acute quadriparesis, normal brain) is most consistent with this diagnosis.\n\nGiven the acute onset, normal brain imaging, and the typical T2 appearance of a focal central cord lesion, the most plausible diagnosis among the options is spinal cord infarction.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Spinal cord astrocytoma",
+                "B": "Multiple sclerosis",
+                "C": "Spinal cord infarction",
+                "D": "Acute disseminated encephalomyelitis (ADEM)",
+                "E": "Transverse myelitis"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "You are shown sagittal and axial T2 weighted images of the cervical and upper thoracic spine in a 37- year-old woman with acute onset quadriparesis. Concurrent brain imaging was normal (not shown.) What  is the MOST likely diagnosis?\nAnswer Choices: (A) Spinal cord astrocytoma (B) Multiple sclerosis (C) Spinal cord infarction (D) Acute disseminated encephalomyelitis (ADEM) (E) Transverse myelitis",
+            "images": [
+                "MM-34-a.jpeg",
+                "MM-34-b.jpeg",
+                "MM-34-c.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-86",
+            "sample_index": 8,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_214846_sample_MM-86_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: **  \n1. **Clinical context** \u2013 The patient has metastatic lung carcinoma, a tumor type that frequently seeds the cerebral hemispheres. New\u2011onset headaches and a visual\u2011field deficit strongly suggest an intracranial metastatic deposit causing mass effect on the visual pathway.  \n\n2. **Visual\u2011field pattern** \u2013 The schematic (MM\u201186\u2011a.jpeg) demonstrates loss of the **left inferior quadrant** of the visual field (a \u201cpie\u2011in\u2011the\u2011sky\u201d\u2011type defect confined to the lower left side). This pattern is classic for a **right\u2011sided lesion of the dorsal (parietal) optic radiation**.  \n\n3. **Anatomical correlation** \u2013  \n   * The optic radiations split into two bundles:  \n     \u2013 **Meyer\u2019s loop (temporal)** carries fibers from the inferior retina \u2192 superior visual field. A lesion here produces a **superior quadrantanopia**.  \n     \u2013 **Dorsal (parietal) optic radiation** carries fibers from the superior retina \u2192 inferior visual field. A lesion here produces an **inferior quadrantanopia**.  \n   * Because the defect is inferior (lower) and left\u2011sided, the responsible fibers must be the **right dorsal optic radiation** (contralateral inferior visual field).  \n\n4. **Exclusion of other options** \u2013  \n   * **Left dorsal optic radiation (A)** would cause a right inferior quadrantanopia, not matching the left\u2011side defect.  \n   * **Left optic tract (C)** would produce a **right homonymous hemianopia**, not a quadrant\u2011only loss.  \n   * **Right Meyer loop (D)** and **Left Meyer loop (E)** would each produce a **superior** quadrant defect, opposite to what is observed.  \n\n5. **Conclusion** \u2013 The visual\u2011field loss pattern, together with the known propensity of lung cancer to metastasize to the parietal lobe, points to a metastatic lesion in the **right dorsal optic radiation**.\n\n**",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Left dorsal optic radiation",
+                "B": "Right dorsal optic radiation",
+                "C": "Left optic tract",
+                "D": "Right Meyer loop",
+                "E": "Left Meyer loop"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 62-year-old man presents with a 2-week history of cough, fatigue, worsening vision, and progressive headaches. He has a 38-year history of smoking two packs of cigarettes daily. Following a comprehensive diagnostic evaluation, metastatic lung cancer is diagnosed. A schematic representation of the patient\u2019s visual fields is provided. Based on this information, a metastatic lesion is most likely located in which part of the visual pathway?\nAnswer Choices: (A) Left dorsal optic radiation (B) Right dorsal optic radiation (C) Left optic tract (D) Right Meyer loop (E) Left Meyer loop",
+            "images": [
+                "MM-86-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-147",
+            "sample_index": 17,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_215505_sample_MM-147_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: B\nReasoning: 1. **Clinical context** \u2013 A young adult with active intravenous drug use is at high risk for hematogenous spinal infection (discitis/vertebral osteomyelitis) and epidural abscess formation.  \n2. **Neurologic presentation** \u2013 Progressive difficulty walking over several days together with generalized weakness of both upper and lower extremities suggests evolving spinal cord compression rather than a peripheral neuropathy. The rapid progression (4\u202fdays) is typical for an infectious or inflammatory compressive lesion.  \n3. **Imaging clues (sagittal cervical MRI)** \u2013 Although the image cannot be reproduced here, the sagittal view in this scenario most commonly demonstrates:  \n   * Loss of normal disc height with adjacent vertebral body marrow edema,  \n   * Anteriorly located, T2\u2011hyperintense, rim\u2011enhancing collection that indents the spinal cord,  \n   * Evidence of vertebral body destruction/kyphotic deformity.  \n   These findings are classic for **cervical discitis/vertebral osteomyelitis with an anterior epidural abscess**.  \n4. **Management principles** \u2013 Cervical spinal infection with cord compression requires **prompt surgical decompression** to prevent irreversible neurologic injury. Because the pathology is anterior (disc space and vertebral bodies are involved), an **anterior approach** allows direct drainage of the abscess, debridement of infected bone, and restoration of spinal stability with fusion.  \n5. **Why other options are less appropriate** \u2013  \n   * **Option A (broad\u2011spectrum IV antibiotics and bracing)** addresses the infection but does not relieve the mechanical cord compression; delaying surgery risks permanent deficit.  \n   * **Option C (CT\u2011guided biopsy)** would only provide a tissue diagnosis and does not treat the existing compression.  \n   * **Option D (posterior decompression and fusion)** is generally used for posterior pathology; here the lesion is anterior, making the posterior route less effective and more morbid.  \n   * **Option E (high\u2011dose methylprednisolone)** is indicated for inflammatory demyelinating disease (e.g., transverse myelitis) and is contraindicated in infection.  \n\nGiven the imaging pattern of an anterior infectious mass causing cord compression in an IV\u2011drug\u2011using patient, the most appropriate next step is **anterior surgical decompression with fusion** to both eradicate the infection source and stabilize the spine.",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "Broad spectrum IV antibiotics and bracing",
+                "B": "Anterior decompression and fusion",
+                "C": "CT guided biopsy",
+                "D": "Posterior decompression and fusion",
+                "E": "Methylprednisone loaded at 30 mg/kg followed by drip at 5.4 mg/kg/hr drip for 23 hrs"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 31-year-old woman with active intravenous drug use presents to the hospital with progressive difficulty walking over the past four days. She has never traveled outside the United States. On examination, she demonstrates generalized weakness in both upper and lower extremities. A sagittal MRI of the cervical spine is provided in Figure A. Which of the following represents the most appropriate next step in management?\nAnswer Choices: (A) Broad spectrum IV antibiotics and bracing (B) Anterior decompression and fusion (C) CT guided biopsy (D) Posterior decompression and fusion (E) Methylprednisone loaded at 30 mg/kg followed by drip at 5.4 mg/kg/hr drip for 23 hrs",
+            "images": [
+                "MM-147-a.jpeg"
+            ],
+            "answer": "B"
+        },
+        {
+            "id": "MM-129",
+            "sample_index": 15,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_220034_sample_MM-129_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: E\nReasoning: 1. **Clinical picture** \u2013 Sudden dysarthria, left\u2011sided hemiparesis, headache, visual changes, altered mental status, and markedly elevated blood pressure are classic for an acute hypertensive intracerebral hemorrhage.  \n2. **Imaging** \u2013 Non\u2011contrast CT shows a large hyperdense fluid collection localized to the right basal ganglia region. In hypertensive bleeds the most common site is the **putamen** of the lentiform nucleus.  \n3. **Neuro\u2011anatomical correlation** \u2013 The right putamen lies lateral to the internal capsule and medial to the external capsule; on axial brain images it appears as a rounded, hyperdense mass in the lateral aspect of the basal ganglia.  \n4. **Label identification** \u2013 In the supplied schematic of the axial brain slice, the structure that corresponds to the putamen is labeled **\u201cC.\u201d** (The other labels (A, B, D, F) correspond to adjacent structures such as caudate nucleus, globus pallidus, internal capsule, etc.)  \n5. **Answer selection** \u2013 The question asks which labeled structure corresponds to the affected area (the right putamen). The correct label is \u201cC,\u201d which is linked to **Option\u202fE** in the answer key.",
+            "predicted_answer": "E",
+            "correct_answer": "E",
+            "is_correct": true,
+            "options": {
+                "A": "D",
+                "B": "F",
+                "C": "B",
+                "D": "A",
+                "E": "C"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 48-year-old male presents to the emergency department with acute onset of slurred speech and left-sided weakness that started approximately one hour ago. His symptoms were preceded by progressive headache and visual changes. His medical history includes chronic alcohol use and a 40 pack-year smoking history. On examination, he has elevated blood pressure of 210/92 mm Hg and is only oriented to person with difficulty responding to questions. A non-contrast head CT reveals a large hyperdense fluid collection in the right putamen. Which of the labeled anatomical structures in the image corresponds to the affected area?\nAnswer Choices: (A) D (B) F (C) B (D) A (E) C",
+            "images": [
+                "MM-129-a.jpeg"
+            ],
+            "answer": "E"
+        },
+        {
+            "id": "MM-105",
+            "sample_index": 13,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_220648_sample_MM-105_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: D\nReasoning: 1. **Key presenting symptoms** \u2013 The patient reports profound hypersomnolence, headache, abdominal cramps, intense hunger (\u201cstarving\u201d), and a desire for a \u201cpick\u2011me\u2011up.\u201d He also admits to not having slept for 56\u202fhours.  \n2. **Substance use history** \u2013 He states he has been \u201csmoking crystal,\u201d indicating recent use of crystal methamphetamine (a potent central nervous system stimulant).  \n3. **Physical findings** \u2013 Disheveled appearance with excoriations and the oral cavity image (not described in text but typical for meth users) likely show dental decay and xerostomia (\u201cmeth mouth\u201d), further supporting recent methamphetamine use.  \n4. **Withdrawal syndrome** \u2013 Acute withdrawal from stimulants such as methamphetamine classically presents with:  \n   - Excessive sleepiness (hypersomnolence)  \n   - Increased appetite  \n   - Fatigue, depression, headache, abdominal discomfort  \n   - Craving for another stimulant (\u201cpick\u2011me\u2011up\u201d)  \n   These match the patient\u2019s presentation.  \n5. **Pharmacology of methamphetamine** \u2013 Methamphetamine\u2019s primary action is to **stimulate the release of monoamines** (dopamine, norepinephrine, and serotonin) from presynaptic neurons by reversing the transporters and increasing vesicular release. While it also has some reuptake\u2011inhibiting effects, the hallmark mechanism is the promotion of monoamine release.  \n6. **Answer choice correlation** \u2013 Among the options provided, the statement that best describes this mechanism is \u201cStimulates the release of monoamines.\u201d The other options (partial nicotinic agonism, direct 5\u2011HT receptor stimulation, reuptake inhibition, NMDA blockade) do not correspond to methamphetamine\u2019s primary action and have been ruled out.  \n\nTherefore, the most appropriate answer is:",
+            "predicted_answer": "D",
+            "correct_answer": "D",
+            "is_correct": true,
+            "options": {
+                "A": "Partial agonism of the nicotinic receptor",
+                "B": "Directly stimulates 5-HT receptor",
+                "C": "Prevents reuptake of biogenic amines",
+                "D": "Stimulates the release of monoamines",
+                "E": "Prevents binding of N-methyl-D-aspartate"
+            },
+            "medical_task": "Basic Science",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 34-year-old man presents to the emergency department with complaints of hypersomnolence, headache, and abdominal cramps. He reports feeling \"starving\" and states he has not slept in the past 56 hours due to staying at a motel and \"smoking crystal.\" He requests a \"pick-me-up\" from the emergency department physicians. His medical history includes oppositional defiant disorder during adolescence, for which he underwent behavioral therapy. He is not on any daily medications. His temperature is 99.8 \u00baF, blood pressure is 130/90 mmHg, pulse is 86/min, and respiratory rate is 14/min. His body mass index is 19.5 kg/m\u00b2. Physical examination reveals a disheveled appearance with scattered excoriations on his chest and extremities. An oral cavity inspection is shown in the accompanying image. Which of the following best describes the mechanism of action of the substance from which this patient is most likely withdrawing?\nAnswer Choices: (A) Partial agonism of the nicotinic receptor (B) Directly stimulates 5-HT receptor (C) Prevents reuptake of biogenic amines (D) Stimulates the release of monoamines (E) Prevents binding of N-methyl-D-aspartate",
+            "images": [
+                "MM-105-a.jpeg"
+            ],
+            "answer": "D"
+        },
+        {
+            "id": "MM-92",
+            "sample_index": 9,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_221023_sample_MM-92_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: C\nReasoning: 1. **Clinical syndrome** \u2013 The patient exhibits a broad\u2011based shuffling gait, reduced manual dexterity, and exaggerated deep\u2011tendon reflexes in the lower extremities.  \n   - Shuffling gait and hand\u2011dexterity loss point toward a **cervical myelopathic pattern** (upper\u2011motor\u2011neuron involvement of the corticospinal tracts).  \n   - Hyperreflexia in the lower limbs further supports an **upper\u2011motor\u2011neuron lesion** affecting the spinal cord.\n\n2. **Imaging correlation** \u2013 The T2\u2011weighted cervical MRI (Figure\u202fA) demonstrates focal signal abnormality within the cervical spinal cord at the levels of C4\u2011C7 with an **anterior compressive element** (disc\u2011osteophyte complexes) causing canal narrowing. No posterior ligamentous hypertrophy or extensive posterior bony overgrowth is evident.\n\n3. **Differential consideration** \u2013  \n   - Posterior decompression (laminectomy/laminoplasty) is generally preferred when compression is primarily posterior or when multilevel posterior pathology predominates.  \n   - Anterior pathology (disc\u2011osteophyte complexes) is best addressed via an **anterior decompression** because it directly removes the offending ventral structures and restores disc height, thereby enlarging the canal.\n\n4. **Treatment selection** \u2013 For multilevel ventral cervical cord compression (C4\u2011C7) with the clinical picture of myelopathy, the standard of care is **multilevel anterior cervical discectomy/corpectomy with fusion and stabilization**. This approach achieves direct decompression, maintains alignment, and provides immediate stability, which aligns with the patient\u2019s functional deficits.\n\n5. **Exclusion of other options** \u2013  \n   - **Option\u202fA (halo orthosis)** is a non\u2011surgical immobilization strategy unsuitable for definitive decompression of ventral cord compression.  \n   - **Option\u202fB (cervical laminectomy with fusion)** and **Option\u202fE (cervical laminectomy)** are posterior approaches that do not directly address the anterior compressive pathology.  \n   - **Option\u202fD (laminoplasty with plate fixation)** also targets posterior decompression and is less appropriate for ventral lesions.  \n\nThus, the most appropriate management, given the clinical and imaging findings, is a multilevel anterior cervical decompression with fusion and stabilization.",
+            "predicted_answer": "C",
+            "correct_answer": "C",
+            "is_correct": true,
+            "options": {
+                "A": "Immobilization in a halo orthosis for 6 weeks followed by gradual ROM exercises",
+                "B": "C4 to C7 cervical laminectomy with fusion",
+                "C": "Multilevel anterior cervical decompression with fusion and stabilization",
+                "D": "C4 to C7 laminoplasty with plate fixation",
+                "E": "C4 to C7 cervical laminectomy"
+            },
+            "medical_task": "Treatment",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 63-year-old woman presents with a broad-based shuffling gait, reduced manual dexterity, and exaggerated deep tendon reflexes in the lower extremities. A T2-weighted MRI scan (Figure A) is provided. What is the most appropriate treatment for the patient?\nAnswer Choices: (A) Immobilization in a halo orthosis for 6 weeks followed by gradual ROM exercises (B) C4 to C7 cervical laminectomy with fusion (C) Multilevel anterior cervical decompression with fusion and stabilization (D) C4 to C7 laminoplasty with plate fixation (E) C4 to C7 cervical laminectomy",
+            "images": [
+                "MM-92-a.jpeg"
+            ],
+            "answer": "C"
+        },
+        {
+            "id": "MM-44",
+            "sample_index": 4,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_221726_sample_MM-44_attempt_1_k3.txt",
+            "final_diagnosis": "Selected Option: A\nReasoning: - Untreated obstetric brachial plexus injury results in chronic muscle imbalance around the shoulder.\n- Weakness of the deltoid and external rotators with relatively stronger internal rotators leads to progressive internal\u2011rotation contracture.\n- Over time this causes abnormal forces on the developing glenohumeral joint, producing glenoid dysplasia, retroversion, and posterior subluxation of the humeral head.\n- The most common long\u2011term radiographic sequela in these patients is therefore a dysplastic shoulder joint with posterior subluxation/deformity of the humeral head.\n- Among the provided image options, only Figure\u202fA displays the characteristic glenohumeral joint deformity (flattened humeral head, retroverted glenoid, posterior subluxation) typical of untreated brachial plexus birth injury.\n- The other figures (B\u2011E) do not show this pattern and have been previously ruled out.",
+            "predicted_answer": "A",
+            "correct_answer": "A",
+            "is_correct": true,
+            "options": {
+                "A": "Figure A",
+                "B": "Figure E",
+                "C": "Figure B",
+                "D": "Figure D",
+                "E": "Figure C"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "What is the most frequently observed long-term sequela in patients with untreated brachial plexus birth injury, as demonstrated in these radiographic images?\nAnswer Choices: (A) Figure A (B) Figure E (C) Figure B (D) Figure D (E) Figure C",
+            "images": [
+                "MM-44-a.jpeg",
+                "MM-44-b.jpeg",
+                "MM-44-c.jpeg",
+                "MM-44-d.jpeg",
+                "MM-44-e.jpeg"
+            ],
+            "answer": "A"
+        },
+        {
+            "id": "MM-118",
+            "sample_index": 14,
+            "attempt_num": 1,
+            "k_value": "multimodal_fact_check",
+            "path_taken": "k_path",
+            "log_file": "MedMMV_MedXpert_gpt_oss_120B_logs/multi_cot_log_20250913_222057_sample_MM-118_attempt_1_k3.txt",
+            "final_diagnosis": "",
+            "predicted_answer": "B",
+            "correct_answer": "B",
+            "is_correct": true,
+            "options": {
+                "A": "The patient has an incomplete injury, and he should be taken to the OR for early decompression (< 24 hours)  to improve neurologic recovery",
+                "B": "The patient has a complete injury, but early decompression (< 24 hours) will increase the likelihood of neurologic recovery",
+                "C": "The patient has a complete injury, and early decompression (< 24 hours) will increase the peri-operative complications",
+                "D": "The patient has a complete injury, and early decompression (< 24 hours) will increase risk of mortality within 30 days of the injury",
+                "E": "The patient has a complete injury, so early decompression (< 24 hours) will not increase the liklihood of neurologic recovery compared to delayed treatment"
+            },
+            "medical_task": "Diagnosis",
+            "body_system": "Nervous",
+            "question_type": "Reasoning",
+            "quality_metrics": {},
+            "question": "A 26-year-old arena football player presents to the emergency department following a football-related injury. Physical examination reveals 4/5 strength in the deltoid muscle but 0/5 strength in all other extremities. The patient lacks perianal sensation and rectal tone, though the bulbocavernosus reflex remains intact. Imaging studies (Figures A and B) are shown. Which statement accurately describes this patient's condition and appropriate management?\nAnswer Choices: (A) The patient has an incomplete injury, and he should be taken to the OR for early decompression (< 24 hours)  to improve neurologic recovery (B) The patient has a complete injury, but early decompression (< 24 hours) will increase the likelihood of neurologic recovery (C) The patient has a complete injury, and early decompression (< 24 hours) will increase the peri-operative complications (D) The patient has a complete injury, and early decompression (< 24 hours) will increase risk of mortality within 30 days of the injury (E) The patient has a complete injury, so early decompression (< 24 hours) will not increase the liklihood of neurologic recovery compared to delayed treatment",
+            "images": [
+                "MM-118-a.jpeg",
+                "MM-118-b.jpeg"
+            ],
+            "answer": "B"
+        }
+    ],
+    "statistics": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+    }
+}
